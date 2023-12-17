@@ -4,6 +4,6 @@ plugins:
 - jekyll-redirect-from
 theme: jekyll-theme-minimal
 author:
-  name: MtSaka
+  name: Toncochan
 timezone: Asia/Tokyo
 title: Toncochan's Library
