@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data-structure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/binary-indexed-tree.hpp
       title: BinaryIndexedTree
     - icon: ':warning:'
@@ -31,7 +31,7 @@ data:
       title: Bellman-Ford
     - icon: ':warning:'
       path: graph/detect-cycle.hpp
-      title: graph/detect-cycle.hpp
+      title: DetectCycle
     - icon: ':warning:'
       path: graph/dijkstra.hpp
       title: Dijkstra
@@ -79,7 +79,12 @@ data:
     - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
-  verificationCategories: []
+  verificationCategories:
+  - name: tests/aoj
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/DSL_2_B.test.cpp
+      title: tests/aoj/DSL_2_B.test.cpp
 layout: toppage
 ---
 [![Toncochan](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2FToncochan)](https://atcoder.jp/users/Toncochan)

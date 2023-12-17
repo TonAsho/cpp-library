@@ -10,6 +10,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: DetectCycle
     links: []
   bundledCode: "#line 2 \"graph/detect-cycle.hpp\"\n#include <bits/stdc++.h>\n#line\
     \ 3 \"graph/graph-template.hpp\"\n/**\n * @brief Graph Template\n */\ntemplate<typename\
@@ -31,28 +32,30 @@ data:
     \    }\n    inline std::vector<Edge<T>> &operator[](const int &k) {\n        return\
     \ g[k];\n    }\n    inline const std::vector<Edge<T>> &operator[](const int &k)\
     \ const {\n        return g[k];\n    }\n};\ntemplate<typename T = int>\nusing\
-    \ Edges = std::vector<Edge<T>>;\n#line 4 \"graph/detect-cycle.hpp\"\ntemplate<typename\
-    \ T>\nbool detect_cycle(const Graph<T> &g) {\n    const int n = g.size();\n  \
-    \  std::vector<int> deg(n, 0);\n    for(int i = 0; i < n; i++) for(auto &e : g[i])\
-    \ deg[e]++;\n    std::queue<int> q;\n    for(int i = 0; i < n; i++) if(deg[i]\
-    \ == 0) q.push(i);\n    while(!q.empty()) {\n        int u = q.front(); q.pop();\n\
-    \        for(auto &e : g[u]) {\n            deg[e]--;\n            if(deg[e] ==\
-    \ 0) q.push(e);\n        }\n    }\n    for(int i = 0; i < n; i++) if(deg[i] !=\
-    \ 0) return true;\n    return false;\n}\n"
+    \ Edges = std::vector<Edge<T>>;\n#line 4 \"graph/detect-cycle.hpp\"\n/**\n * @brief\
+    \ DetectCycle\n */\ntemplate<typename T>\nbool detect_cycle(const Graph<T> &g)\
+    \ {\n    const int n = g.size();\n    std::vector<int> deg(n, 0);\n    for(int\
+    \ i = 0; i < n; i++) for(auto &e : g[i]) deg[e]++;\n    std::queue<int> q;\n \
+    \   for(int i = 0; i < n; i++) if(deg[i] == 0) q.push(i);\n    while(!q.empty())\
+    \ {\n        int u = q.front(); q.pop();\n        for(auto &e : g[u]) {\n    \
+    \        deg[e]--;\n            if(deg[e] == 0) q.push(e);\n        }\n    }\n\
+    \    for(int i = 0; i < n; i++) if(deg[i] != 0) return true;\n    return false;\n\
+    }\n"
   code: "#pragma once\n#include <bits/stdc++.h>\n#include \"./graph-template.hpp\"\
-    \ntemplate<typename T>\nbool detect_cycle(const Graph<T> &g) {\n    const int\
-    \ n = g.size();\n    std::vector<int> deg(n, 0);\n    for(int i = 0; i < n; i++)\
-    \ for(auto &e : g[i]) deg[e]++;\n    std::queue<int> q;\n    for(int i = 0; i\
-    \ < n; i++) if(deg[i] == 0) q.push(i);\n    while(!q.empty()) {\n        int u\
-    \ = q.front(); q.pop();\n        for(auto &e : g[u]) {\n            deg[e]--;\n\
-    \            if(deg[e] == 0) q.push(e);\n        }\n    }\n    for(int i = 0;\
-    \ i < n; i++) if(deg[i] != 0) return true;\n    return false;\n}"
+    \n/**\n * @brief DetectCycle\n */\ntemplate<typename T>\nbool detect_cycle(const\
+    \ Graph<T> &g) {\n    const int n = g.size();\n    std::vector<int> deg(n, 0);\n\
+    \    for(int i = 0; i < n; i++) for(auto &e : g[i]) deg[e]++;\n    std::queue<int>\
+    \ q;\n    for(int i = 0; i < n; i++) if(deg[i] == 0) q.push(i);\n    while(!q.empty())\
+    \ {\n        int u = q.front(); q.pop();\n        for(auto &e : g[u]) {\n    \
+    \        deg[e]--;\n            if(deg[e] == 0) q.push(e);\n        }\n    }\n\
+    \    for(int i = 0; i < n; i++) if(deg[i] != 0) return true;\n    return false;\n\
+    }"
   dependsOn:
   - graph/graph-template.hpp
   isVerificationFile: false
   path: graph/detect-cycle.hpp
   requiredBy: []
-  timestamp: '2023-12-17 14:37:01+09:00'
+  timestamp: '2023-12-17 14:51:54+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/detect-cycle.hpp
@@ -60,5 +63,5 @@ layout: document
 redirect_from:
 - /library/graph/detect-cycle.hpp
 - /library/graph/detect-cycle.hpp.html
-title: graph/detect-cycle.hpp
+title: DetectCycle
 ---

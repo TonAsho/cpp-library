@@ -5,10 +5,13 @@ data:
   - icon: ':warning:'
     path: data-structure/inversion-number.hpp
     title: Inversion Number
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_B.test.cpp
+    title: tests/aoj/DSL_2_B.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: BinaryIndexedTree
     links: []
@@ -41,8 +44,9 @@ data:
   requiredBy:
   - data-structure/inversion-number.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/aoj/DSL_2_B.test.cpp
 documentation_of: data-structure/binary-indexed-tree.hpp
 layout: document
 redirect_from:

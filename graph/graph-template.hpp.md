@@ -7,7 +7,7 @@ data:
     title: Bellman-Ford
   - icon: ':warning:'
     path: graph/detect-cycle.hpp
-    title: graph/detect-cycle.hpp
+    title: DetectCycle
   - icon: ':warning:'
     path: graph/dijkstra.hpp
     title: Dijkstra
