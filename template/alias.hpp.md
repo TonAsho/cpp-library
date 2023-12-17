@@ -9,12 +9,6 @@ data:
     path: data-structure/segment-tree.hpp
     title: SegmentTree
   - icon: ':warning:'
-    path: graph/bellman-ford.hpp
-    title: Bellman-Ford
-  - icon: ':warning:'
-    path: graph/dijkstra.hpp
-    title: Dijkstra
-  - icon: ':warning:'
     path: math/modint.hpp
     title: ModInt
   - icon: ':warning:'
@@ -64,8 +58,6 @@ data:
   - math/modint.hpp
   - template/template.hpp
   - others/monoid.hpp
-  - graph/bellman-ford.hpp
-  - graph/dijkstra.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

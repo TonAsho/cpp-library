@@ -30,6 +30,9 @@ data:
       path: graph/bellman-ford.hpp
       title: Bellman-Ford
     - icon: ':warning:'
+      path: graph/detect-cycle.hpp
+      title: graph/detect-cycle.hpp
+    - icon: ':warning:'
       path: graph/dijkstra.hpp
       title: Dijkstra
     - icon: ':warning:'
