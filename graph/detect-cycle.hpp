@@ -1,6 +1,9 @@
 #pragma once
 #include <bits/stdc++.h>
 #include "./graph-template.hpp"
+/**
+ * @brief DetectCycle
+ */
 template<typename T>
 bool detect_cycle(const Graph<T> &g) {
     const int n = g.size();
