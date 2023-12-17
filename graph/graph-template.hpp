@@ -3,7 +3,7 @@
 /**
  * @brief Graph Template
  */
-template< typename T = int >
+template<typename T = int>
 struct Edge {
     int from, to;
     T cost;
@@ -11,11 +11,11 @@ struct Edge {
     Edge() = default;
     Edge(int from, int to, T cost = 1, int idx = -1) : from(from), to(to), cost(cost), idx(idx) {}
     operator int() const { return to; }
-    bool operator<(const Edge& o) const{return cost<o.cost;}
+    bool operator<(const Edge& o) const{ return cost < o.cost; }
 };
-template< typename T = int >
+template<typename T = int>
 struct Graph {
-    std::vector< std::vector< Edge< T > > > g;
+    std::vector<std::vector<Edge<T>>> g;
     int es;
     Graph() = default;
     explicit Graph(int n) : g(n), es(0) {}
@@ -31,22 +31,22 @@ struct Graph {
     }
     void read(int M, int padding = -1, bool weighted = false, bool directed = false) {
         for(int i = 0; i < M; i++) {
-        int a, b;
-        cin >> a >> b;
-        a += padding;
-        b += padding;
-        T c = T(1);
-        if(weighted) cin >> c;
-        if(directed) add_directed_edge(a, b, c);
-        else add_edge(a, b, c);
+            int a, b;
+            cin >> a >> b;
+            a += padding;
+            b += padding;
+            T c = T(1);
+            if(weighted) cin >> c;
+            if(directed) add_directed_edge(a, b, c);
+            else add_edge(a, b, c);
         }
     }
-    inline std::vector< Edge< T > > &operator[](const int &k) {
+    inline std::vector<Edge<T>> &operator[](const int &k) {
         return g[k];
     }
-    inline const std::vector< Edge< T > > &operator[](const int &k) const {
+    inline const std::vector<Edge<T>> &operator[](const int &k) const {
         return g[k];
     }
 };
-template< typename T = int >
-using Edges = std::vector< Edge< T > >;
+template<typename T = int>
+using Edges = std::vector<Edge<T>>;

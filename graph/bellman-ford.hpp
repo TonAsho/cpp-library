@@ -1,23 +1,44 @@
 #pragma once
 #include <bits/stdc++.h>
-#include "../template/alias.hpp"
 #include "./graph-template.hpp"
 /**
  * @brief Bellman-Ford
  */
-template< typename T >
-std::vector<T> bellman_ford(const Edges< T > &edges, int V, int s) {
-    std::vector< T > dist(V, INF<T>);
-    dist[s] = 0;
-    for(int i = 0; i < V - 1; i++) {
-        for(auto &e : edges) {
-        if(dist[e.from] == INF) continue;
-            dist[e.to] = min(dist[e.to], dist[e.from] + e.cost);
+template<typename T>
+std::vector<T> bellman_ford(const Graph<T> &g, int s) {
+    const int n = g.size();
+    const T MAX = std::numeric_limits<T>::max() / 2;
+    std::vector<T> d(n, MAX);
+    d[s] = 0;
+    for(int i = 0; i < n; i++) {
+        bool changed = false;
+        for(int j = 0; j < n; j++) {
+            for(auto &e : g[j]) {
+                if(d[j] != MAX && d[e] > d[j] + e.cost) {
+                    d[e] = d[j] + e.cost;
+                    changed = true;
+                }
+            }
+        }
+        if(!changed) return d;
+    }
+    for(int i = 0; i < n; i++) {
+        for(auto &e : g[i]) {
+            if(d[i] != MAX && d[e] > d[i] + e.cost) d[e] = -MAX;
         }
     }
-    for(auto &e : edges) {
-        if(dist[e.from] == INF) continue;
-        if(dist[e.from] + e.cost < dist[e.to]) return std::vector<T>();
+    for(int i = 0; i < n - 1; i++){
+        bool changed=false;
+        for(int j = 0; j < n; j++){
+            if(d[j] != -MAX) continue;
+            for(auto &e : g[j]){
+                if(d[e] != -MAX){
+                    d[e] = d[j];
+                    changed = true;
+                }
+            }
+        }
+        if(!changed)break;
     }
-    return dist;
+    return d;
 }

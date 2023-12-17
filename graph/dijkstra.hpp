@@ -1,37 +1,48 @@
 #pragma once
 #include <bits/stdc++.h>
-#include "../template/alias.hpp"
 #include "./graph-template.hpp"
 /**
  * @brief Dijkstra
  */
-template<typename T>
-struct ShortestPath {
-    std::vector<T> dist;
-    std::vector<int> from, id;
-};
 template< typename T >
-ShortestPath< T > dijkstra(const Graph< T > &g, int s) {
-    std::vector< T > dist(g.size(), INF<T>);
-    std::vector< int > from(g.size(), -1), id(g.size(), -1);
-    using Pi = pair< T, int >;
-    priority_queue< Pi, std::vector< Pi >, greater<> > que;
-    dist[s] = 0;
-    que.emplace(dist[s], s);
-    while(!que.empty()) {
-        T cost;
-        int idx;
-        tie(cost, idx) = que.top();
-        que.pop();
-        if(dist[idx] < cost) continue;
-        for(auto &e : g[idx]) {
-            auto next_cost = cost + e.cost;
-            if(dist[e.to] <= next_cost) continue;
-            dist[e.to] = next_cost;
-            from[e.to] = idx;
-            id[e.to] = e.idx;
-            que.emplace(dist[e.to], e.to);
+struct Dijkstra : Graph<T> {
+    using Graph<T>::g;
+  private:
+    using P = std::pair<T, int>;
+    const T MAX = std::numeric_limits<T>::max() / 2;
+    int from;
+    std::vector<T> d, prev;
+  public:
+    Dijkstra(int n) : Graph<T>(n) {}
+    void build(int from) {
+        this->from = from;
+        d.assign(g.size(), MAX);
+        prev.assign(g.size(), 0);
+        d[from] = 0;
+        std::priority_queue<P, std::vector<P>, std::greater<P>> q;
+        q.emplace(0, from);
+        while(!q.empty()) {
+            auto [d_u, u] = q.top(); q.pop();
+            if(d[u] < d_u) continue;
+            for(auto &e : g[u]) {
+                if(d[e] > d[u] + e.cost) {
+                    d[e] = d[u] + e.cost;
+                    prev[e] = u;
+                    q.emplace(d[e], e);
+                }
+            }
         }
     }
-    return {dist, from, id};
-}
+    T dist(int to) {
+        assert(0 <= to && to < (int)d.size());
+        return d[to];
+    }
+    std::vector<int> path(int to) {
+        assert(0 <= to && to < (int)d.size());
+        if(d[to] == MAX) return {};
+        std::vector<int> path = {to};
+        while(path.back() != from) path.emplace_back(prev[path.back()]);
+        reverse(path.begin(), path.end());
+        return path;
+    }
+};
