@@ -3,7 +3,3 @@ plugins:
 - jemoji
 - jekyll-redirect-from
 theme: jekyll-theme-minimal
-author:
-  name: Toncochan
-timezone: Asia/Tokyo
-title: Toncochan's Library
