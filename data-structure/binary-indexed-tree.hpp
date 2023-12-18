@@ -32,5 +32,5 @@ struct BinaryIndexedTree {
     T sum(int l, int r) {
         return sum(r) - sum(l);
     }
-    T operator[](int x) const { return sum(x, x + 1); }
+    T operator[](int x) { return sum(x, x + 1); }
 };

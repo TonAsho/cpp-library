@@ -32,11 +32,11 @@ struct Graph {
     void read(int M, int padding = -1, bool weighted = false, bool directed = false) {
         for(int i = 0; i < M; i++) {
             int a, b;
-            cin >> a >> b;
+            std::cin >> a >> b;
             a += padding;
             b += padding;
             T c = T(1);
-            if(weighted) cin >> c;
+            if(weighted) std::cin >> c;
             if(directed) add_directed_edge(a, b, c);
             else add_edge(a, b, c);
         }

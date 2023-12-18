@@ -6,13 +6,13 @@
  */
 template< typename T >
 struct Dijkstra : Graph<T> {
-    using Graph<T>::g;
   private:
     using P = std::pair<T, int>;
     const T MAX = std::numeric_limits<T>::max() / 2;
     int from;
     std::vector<T> d, prev;
   public:
+    using Graph<T>::g;
     Dijkstra(int n) : Graph<T>(n) {}
     void build(int from) {
         this->from = from;
