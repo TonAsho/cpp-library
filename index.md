@@ -35,7 +35,10 @@ data:
     - icon: ':warning:'
       path: graph/dijkstra.hpp
       title: Dijkstra
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
+      path: graph/euler-tour.hpp
+      title: graph/euler-tour.hpp
+    - icon: ':heavy_check_mark:'
       path: graph/graph-template.hpp
       title: Graph Template
     - icon: ':warning:'
@@ -57,6 +60,9 @@ data:
     - icon: ':warning:'
       path: others/monoid.hpp
       title: others/monoid.hpp
+    - icon: ':warning:'
+      path: others/random-test.hpp
+      title: others/random-test.hpp
   - name: string
     pages:
     - icon: ':warning:'
@@ -79,12 +85,34 @@ data:
     - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
+  - name: tests/yosupo
+    pages:
+    - icon: ':warning:'
+      path: tests/yosupo/vertex_add_path_sum.tset.cpp
+      title: tests/yosupo/vertex_add_path_sum.tset.cpp
   verificationCategories:
   - name: tests/aoj
     pages:
     - icon: ':heavy_check_mark:'
       path: tests/aoj/DSL_2_B.test.cpp
       title: tests/aoj/DSL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/GRL_5_C.test.cpp
+      title: tests/aoj/GRL_5_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/GRL_5_D.test.cpp
+      title: tests/aoj/GRL_5_D.test.cpp
+  - name: tests/yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/lca_euler_tour.test.cpp
+      title: tests/yosupo/lca_euler_tour.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/point_add_range_sum.test.cpp
+      title: tests/yosupo/point_add_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/vertex_add_subtree_sum.test.cpp
+      title: tests/yosupo/vertex_add_subtree_sum.test.cpp
 layout: toppage
 ---
 [![Toncochan](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2FToncochan)](https://atcoder.jp/users/Toncochan)

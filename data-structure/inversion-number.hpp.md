@@ -26,7 +26,7 @@ data:
     \ v[i]);\n    }\n    void add(int x, T val) {\n        x++;\n        while(x <=\
     \ n) {\n            data[x] += val;\n            x += x & -x;\n        }\n   \
     \ }\n    T sum(int l, int r) {\n        return sum(r) - sum(l);\n    }\n    T\
-    \ operator[](int x) const { return sum(x, x + 1); }\n};\n#line 3 \"others/compressor.hpp\"\
+    \ operator[](int x) { return sum(x, x + 1); }\n};\n#line 3 \"others/compressor.hpp\"\
     \ntemplate<typename T, typename Comp = std::less<T>>\nstruct Compressor {\n  private:\n\
     \    std::vector<T> data;\n    Comp cmp;\n    bool sorted = false;\n  public:\n\
     \    Compressor() : Compressor(Comp()) {}\n    Compressor(const Comp &cmp) : cmp(cmp)\
@@ -68,7 +68,7 @@ data:
   isVerificationFile: false
   path: data-structure/inversion-number.hpp
   requiredBy: []
-  timestamp: '2023-12-17 11:32:30+09:00'
+  timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/inversion-number.hpp

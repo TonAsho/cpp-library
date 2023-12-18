@@ -25,8 +25,8 @@ data:
     \ = 0; i < n; ++i) add(i, v[i]);\n    }\n    void add(int x, T val) {\n      \
     \  x++;\n        while(x <= n) {\n            data[x] += val;\n            x +=\
     \ x & -x;\n        }\n    }\n    T sum(int l, int r) {\n        return sum(r)\
-    \ - sum(l);\n    }\n    T operator[](int x) const { return sum(x, x + 1); }\n\
-    };\n#line 4 \"tests/aoj/DSL_2_B.test.cpp\"\n\nint main() {\n    std::ios::sync_with_stdio(false);\
+    \ - sum(l);\n    }\n    T operator[](int x) { return sum(x, x + 1); }\n};\n#line\
+    \ 4 \"tests/aoj/DSL_2_B.test.cpp\"\n\nint main() {\n    std::ios::sync_with_stdio(false);\
     \ std::cin.tie(nullptr);\n    int N, Q;\n    std::cin >> N >> Q;\n    BinaryIndexedTree<long\
     \ long> bit(N + 1);\n    while(Q--) {\n        int t, x, y;\n        std::cin\
     \ >> t >> x >> y;\n        if(t == 0) {\n            bit.add(x, y);\n        }\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: tests/aoj/DSL_2_B.test.cpp
   requiredBy: []
-  timestamp: '2023-12-17 14:51:54+09:00'
+  timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/aoj/DSL_2_B.test.cpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/graph-template.hpp
     title: Graph Template
   _extendedRequiredBy: []
@@ -26,14 +26,14 @@ data:
     \ to, cost, es);\n        g[to].emplace_back(to, from, cost, es++);\n    }\n \
     \   void read(int M, int padding = -1, bool weighted = false, bool directed =\
     \ false) {\n        for(int i = 0; i < M; i++) {\n            int a, b;\n    \
-    \        cin >> a >> b;\n            a += padding;\n            b += padding;\n\
-    \            T c = T(1);\n            if(weighted) cin >> c;\n            if(directed)\
-    \ add_directed_edge(a, b, c);\n            else add_edge(a, b, c);\n        }\n\
-    \    }\n    inline std::vector<Edge<T>> &operator[](const int &k) {\n        return\
-    \ g[k];\n    }\n    inline const std::vector<Edge<T>> &operator[](const int &k)\
-    \ const {\n        return g[k];\n    }\n};\ntemplate<typename T = int>\nusing\
-    \ Edges = std::vector<Edge<T>>;\n#line 4 \"graph/lca.hpp\"\n/**\n * @brief LCA\n\
-    \ */\ntemplate<class T>\nstruct LCA : Graph<T> {\n  private:\n    std::vector<std::vector<int>>\
+    \        std::cin >> a >> b;\n            a += padding;\n            b += padding;\n\
+    \            T c = T(1);\n            if(weighted) std::cin >> c;\n          \
+    \  if(directed) add_directed_edge(a, b, c);\n            else add_edge(a, b, c);\n\
+    \        }\n    }\n    inline std::vector<Edge<T>> &operator[](const int &k) {\n\
+    \        return g[k];\n    }\n    inline const std::vector<Edge<T>> &operator[](const\
+    \ int &k) const {\n        return g[k];\n    }\n};\ntemplate<typename T = int>\n\
+    using Edges = std::vector<Edge<T>>;\n#line 4 \"graph/lca.hpp\"\n/**\n * @brief\
+    \ LCA\n */\ntemplate<class T>\nstruct LCA : Graph<T> {\n  private:\n    std::vector<std::vector<int>>\
     \ parent;\n    std::vector<int> depth; // dist from root\n    void dfs(int v,\
     \ int p, int d) {\n        parent[0][v] = p;\n        depth[v] = d;\n        for(auto\
     \ e : g[v]) if(e.to != p) {\n            dfs(e.to, v, d + 1);\n        }\n   \
@@ -78,7 +78,7 @@ data:
   isVerificationFile: false
   path: graph/lca.hpp
   requiredBy: []
-  timestamp: '2023-12-17 14:37:01+09:00'
+  timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/lca.hpp
