@@ -37,7 +37,7 @@ data:
       title: Dijkstra
     - icon: ':heavy_check_mark:'
       path: graph/euler-tour.hpp
-      title: graph/euler-tour.hpp
+      title: EulerTour
     - icon: ':heavy_check_mark:'
       path: graph/graph-template.hpp
       title: Graph Template

@@ -13,7 +13,7 @@ data:
     title: Dijkstra
   - icon: ':heavy_check_mark:'
     path: graph/euler-tour.hpp
-    title: graph/euler-tour.hpp
+    title: EulerTour
   - icon: ':warning:'
     path: graph/lca.hpp
     title: LCA
