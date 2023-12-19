@@ -1,6 +1,9 @@
 #pragma once
 #include <bits/stdc++.h>
 #include "graph/graph-template.hpp"
+/**
+ * @brief EulerTour
+ */
 template<typename T>
 struct EulerTour : Graph<T> {
   private:
