@@ -21,7 +21,7 @@ struct UnionFind {
     int unite(int x, int y) {
         x = leader(x); y = leader(y);
         if(x == y) return x;
-        if(sz[x] < sz[y]) swap(x, y);
+        if(sz[x] < sz[y]) std::swap(x, y);
         sz[x] += sz[y];
         ps[y] = x;
         cnt--;
