@@ -1,20 +1,29 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: template/alias.hpp
     title: template/alias.hpp
   _extendedRequiredBy:
   - icon: ':warning:'
     path: data-structure/lazy-segment-tree.hpp
     title: LazySegmentTree
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/segment-tree.hpp
     title: SegmentTree
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_A.test.cpp
+    title: tests/aoj/DSL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_B_2.test.cpp
+    title: tests/aoj/DSL_2_B_2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/yosupo/point_add_range_sum_2.test.cpp
+    title: tests/yosupo/point_add_range_sum_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"others/monoid.hpp\"\n#include <bits/stdc++.h>\n#line 3 \"\
@@ -31,26 +40,27 @@ data:
     \ T mvalue=std::numeric_limits<T>::min()/2;\n};\ntemplate<typename T>constexpr\
     \ T INF=infinity<T>::value;\nconstexpr ll infl=INF<ll>;\nconstexpr int inf = INF<int>;\n\
     constexpr ld PI = 3.1415926535897932384626;\n#line 4 \"others/monoid.hpp\"\nnamespace\
-    \ Monoid {\n    template<typename M,typename=void>struct has_op:false_type{};\n\
-    \    template<typename M>struct has_op<M,decltype((void)M::op)>:true_type{};\n\
-    \    template<typename M,typename=void>struct has_id:false_type{};\n    template<typename\
-    \ M>struct has_id<M,decltype((void)M::id)>:true_type{};\n    template<typename\
-    \ M,typename=void>struct has_inv:false_type{};\n    template<typename M>struct\
-    \ has_inv<M,decltype((void)M::inv)>:true_type{};\n    template<typename M,typename=void>struct\
-    \ has_get_inv:false_type{};\n    template<typename M>struct has_get_inv<M,decltype((void)M::get_inv)>:true_type{};\n\
-    \    template<typename A,typename=void>struct has_mul_op:false_type{};\n    template<typename\
-    \ A>struct has_mul_op<A,decltype((void)A::mul_op)>:true_type{};\n    template<typename\
-    \ T,typename=void>struct is_semigroup:false_type{};\n    template<typename T>struct\
-    \ is_semigroup<T,decltype(std::declval<typename T::value_type>(),(void)T::op)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_monoid:false_type{};\n    template<typename\
-    \ T>struct is_monoid<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_group:false_type{};\n    template<typename\
-    \ T>struct is_group<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id,(void)T::get_inv)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_action:false_type{};\n    template<typename\
-    \ T>struct is_action<T,typename std::enable_if<is_monoid<typename T::M>::value&&is_semigroup<typename\
-    \ T::E>::value&&(has_op<T>::value||has_mul_op<T>::value)>::type>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_distributable_action:false_type{};\n\
-    \    template<typename T>struct is_distributable_action<T,typename std::enable_if<is_action<T>::value&&!has_mul_op<T>::value>::type>:true_type{};\n\
+    \ Monoid {\n    template<typename M,typename=void>struct has_op:std::false_type{};\n\
+    \    template<typename M>struct has_op<M,decltype((void)M::op)>:std::true_type{};\n\
+    \    template<typename M,typename=void>struct has_id:std::false_type{};\n    template<typename\
+    \ M>struct has_id<M,decltype((void)M::id)>:std::true_type{};\n    template<typename\
+    \ M,typename=void>struct has_inv:std::false_type{};\n    template<typename M>struct\
+    \ has_inv<M,decltype((void)M::inv)>:std::true_type{};\n    template<typename M,typename=void>struct\
+    \ has_get_inv:std::false_type{};\n    template<typename M>struct has_get_inv<M,decltype((void)M::get_inv)>:std::true_type{};\n\
+    \    template<typename A,typename=void>struct has_mul_op:std::false_type{};\n\
+    \    template<typename A>struct has_mul_op<A,decltype((void)A::mul_op)>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_semigroup:std::false_type{};\n\
+    \    template<typename T>struct is_semigroup<T,decltype(std::declval<typename\
+    \ T::value_type>(),(void)T::op)>:std::true_type{};\n    template<typename T,typename=void>struct\
+    \ is_monoid:std::false_type{};\n    template<typename T>struct is_monoid<T,decltype(std::declval<typename\
+    \ T::value_type>(),(void)T::op,(void)T::id)>:std::true_type{};\n    template<typename\
+    \ T,typename=void>struct is_group:std::false_type{};\n    template<typename T>struct\
+    \ is_group<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id,(void)T::get_inv)>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_action:std::false_type{};\n \
+    \   template<typename T>struct is_action<T,typename std::enable_if<is_monoid<typename\
+    \ T::M>::value&&is_semigroup<typename T::E>::value&&(has_op<T>::value||has_mul_op<T>::value)>::type>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_distributable_action:std::false_type{};\n\
+    \    template<typename T>struct is_distributable_action<T,typename std::enable_if<is_action<T>::value&&!has_mul_op<T>::value>::type>:std::true_type{};\n\
     \n    template<class T> struct Sum {\n        using value_type = T;\n        static\
     \ constexpr T op(const T& a, const T& b) { return a + b; }\n        static constexpr\
     \ T id() { return T{0}; }\n        static constexpr T inv(const T& a, const T&\
@@ -81,26 +91,27 @@ data:
     \       static constexpr T mul_op(const T& a, int b, const T& c) {\n         \
     \   return c + a * b;\n        }\n    };\n}\n"
   code: "#pragma once\n#include <bits/stdc++.h>\n#include \"template/alias.hpp\"\n\
-    namespace Monoid {\n    template<typename M,typename=void>struct has_op:false_type{};\n\
-    \    template<typename M>struct has_op<M,decltype((void)M::op)>:true_type{};\n\
-    \    template<typename M,typename=void>struct has_id:false_type{};\n    template<typename\
-    \ M>struct has_id<M,decltype((void)M::id)>:true_type{};\n    template<typename\
-    \ M,typename=void>struct has_inv:false_type{};\n    template<typename M>struct\
-    \ has_inv<M,decltype((void)M::inv)>:true_type{};\n    template<typename M,typename=void>struct\
-    \ has_get_inv:false_type{};\n    template<typename M>struct has_get_inv<M,decltype((void)M::get_inv)>:true_type{};\n\
-    \    template<typename A,typename=void>struct has_mul_op:false_type{};\n    template<typename\
-    \ A>struct has_mul_op<A,decltype((void)A::mul_op)>:true_type{};\n    template<typename\
-    \ T,typename=void>struct is_semigroup:false_type{};\n    template<typename T>struct\
-    \ is_semigroup<T,decltype(std::declval<typename T::value_type>(),(void)T::op)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_monoid:false_type{};\n    template<typename\
-    \ T>struct is_monoid<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_group:false_type{};\n    template<typename\
-    \ T>struct is_group<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id,(void)T::get_inv)>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_action:false_type{};\n    template<typename\
-    \ T>struct is_action<T,typename std::enable_if<is_monoid<typename T::M>::value&&is_semigroup<typename\
-    \ T::E>::value&&(has_op<T>::value||has_mul_op<T>::value)>::type>:true_type{};\n\
-    \    template<typename T,typename=void>struct is_distributable_action:false_type{};\n\
-    \    template<typename T>struct is_distributable_action<T,typename std::enable_if<is_action<T>::value&&!has_mul_op<T>::value>::type>:true_type{};\n\
+    namespace Monoid {\n    template<typename M,typename=void>struct has_op:std::false_type{};\n\
+    \    template<typename M>struct has_op<M,decltype((void)M::op)>:std::true_type{};\n\
+    \    template<typename M,typename=void>struct has_id:std::false_type{};\n    template<typename\
+    \ M>struct has_id<M,decltype((void)M::id)>:std::true_type{};\n    template<typename\
+    \ M,typename=void>struct has_inv:std::false_type{};\n    template<typename M>struct\
+    \ has_inv<M,decltype((void)M::inv)>:std::true_type{};\n    template<typename M,typename=void>struct\
+    \ has_get_inv:std::false_type{};\n    template<typename M>struct has_get_inv<M,decltype((void)M::get_inv)>:std::true_type{};\n\
+    \    template<typename A,typename=void>struct has_mul_op:std::false_type{};\n\
+    \    template<typename A>struct has_mul_op<A,decltype((void)A::mul_op)>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_semigroup:std::false_type{};\n\
+    \    template<typename T>struct is_semigroup<T,decltype(std::declval<typename\
+    \ T::value_type>(),(void)T::op)>:std::true_type{};\n    template<typename T,typename=void>struct\
+    \ is_monoid:std::false_type{};\n    template<typename T>struct is_monoid<T,decltype(std::declval<typename\
+    \ T::value_type>(),(void)T::op,(void)T::id)>:std::true_type{};\n    template<typename\
+    \ T,typename=void>struct is_group:std::false_type{};\n    template<typename T>struct\
+    \ is_group<T,decltype(std::declval<typename T::value_type>(),(void)T::op,(void)T::id,(void)T::get_inv)>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_action:std::false_type{};\n \
+    \   template<typename T>struct is_action<T,typename std::enable_if<is_monoid<typename\
+    \ T::M>::value&&is_semigroup<typename T::E>::value&&(has_op<T>::value||has_mul_op<T>::value)>::type>:std::true_type{};\n\
+    \    template<typename T,typename=void>struct is_distributable_action:std::false_type{};\n\
+    \    template<typename T>struct is_distributable_action<T,typename std::enable_if<is_action<T>::value&&!has_mul_op<T>::value>::type>:std::true_type{};\n\
     \n    template<class T> struct Sum {\n        using value_type = T;\n        static\
     \ constexpr T op(const T& a, const T& b) { return a + b; }\n        static constexpr\
     \ T id() { return T{0}; }\n        static constexpr T inv(const T& a, const T&\
@@ -137,9 +148,12 @@ data:
   requiredBy:
   - data-structure/lazy-segment-tree.hpp
   - data-structure/segment-tree.hpp
-  timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2024-01-19 15:38:48+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/yosupo/point_add_range_sum_2.test.cpp
+  - tests/aoj/DSL_2_A.test.cpp
+  - tests/aoj/DSL_2_B_2.test.cpp
 documentation_of: others/monoid.hpp
 layout: document
 redirect_from:

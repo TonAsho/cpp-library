@@ -5,22 +5,31 @@ data:
   - icon: ':warning:'
     path: data-structure/lazy-segment-tree.hpp
     title: LazySegmentTree
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/segment-tree.hpp
     title: SegmentTree
   - icon: ':warning:'
     path: math/modint.hpp
     title: ModInt
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: others/monoid.hpp
     title: others/monoid.hpp
   - icon: ':warning:'
     path: template/template.hpp
     title: template/template.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_A.test.cpp
+    title: tests/aoj/DSL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_B_2.test.cpp
+    title: tests/aoj/DSL_2_B_2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/yosupo/point_add_range_sum_2.test.cpp
+    title: tests/yosupo/point_add_range_sum_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template/alias.hpp\"\n#include <bits/stdc++.h>\n\nusing\
@@ -59,8 +68,11 @@ data:
   - template/template.hpp
   - others/monoid.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/yosupo/point_add_range_sum_2.test.cpp
+  - tests/aoj/DSL_2_A.test.cpp
+  - tests/aoj/DSL_2_B_2.test.cpp
 documentation_of: template/alias.hpp
 layout: document
 redirect_from:

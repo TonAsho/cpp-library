@@ -15,7 +15,7 @@ data:
     - icon: ':warning:'
       path: data-structure/lazy-segment-tree.hpp
       title: LazySegmentTree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/segment-tree.hpp
       title: SegmentTree
     - icon: ':heavy_check_mark:'
@@ -63,7 +63,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: others/compressor.hpp
       title: others/compressor.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: others/monoid.hpp
       title: others/monoid.hpp
     - icon: ':warning:'
@@ -76,7 +76,7 @@ data:
       title: RollingHash
   - name: template
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: template/alias.hpp
       title: template/alias.hpp
     - icon: ':warning:'
@@ -106,8 +106,14 @@ data:
       path: tests/aoj/DSL_1_A.test.cpp
       title: tests/aoj/DSL_1_A.test.cpp
     - icon: ':heavy_check_mark:'
+      path: tests/aoj/DSL_2_A.test.cpp
+      title: tests/aoj/DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
       path: tests/aoj/DSL_2_B.test.cpp
       title: tests/aoj/DSL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/DSL_2_B_2.test.cpp
+      title: tests/aoj/DSL_2_B_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/aoj/GRL_5_C.test.cpp
       title: tests/aoj/GRL_5_C.test.cpp
@@ -122,6 +128,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/point_add_range_sum.test.cpp
       title: tests/yosupo/point_add_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/point_add_range_sum_2.test.cpp
+      title: tests/yosupo/point_add_range_sum_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/unionfind.test.cpp
       title: tests/yosupo/unionfind.test.cpp
