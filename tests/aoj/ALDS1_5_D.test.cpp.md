@@ -4,21 +4,23 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/binary-indexed-tree.hpp
     title: BinaryIndexedTree
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/inversion-number.hpp
     title: Inversion Number
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: others/compressor.hpp
     title: others/compressor.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
-  bundledCode: "#line 1 \"tests/aoj/ALDS1_5_D.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D\"\
+  bundledCode: "#line 1 \"tests/aoj/ALDS1_5_D.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D\"\
     \n#include <bits/stdc++.h>\n#line 3 \"data-structure/binary-indexed-tree.hpp\"\
     \n/**\n * @brief BinaryIndexedTree\n**/\ntemplate<typename T>\nstruct BinaryIndexedTree\
     \ {\n  private:\n    int n;\n    std::vector<T> data;\n    T sum(int x) {\n  \
@@ -57,7 +59,7 @@ data:
     \ a.size();\n    Compressor<int> c(a);\n    c.build();\n    std::vector<int> b\
     \ = c.pressed(a);\n    long long res = 0;\n    BinaryIndexedTree<long long> bit(c.size());\n\
     \    for(int i = 0; i < n; ++i) {\n        res += i - bit.sum(0, b[i] + 1);\n\
-    \        bit.add(b[i], 1);\n    }\n    return res;\n}\n#line 4 \"tests/aoj/ALDS1_5_D.cpp\"\
+    \        bit.add(b[i], 1);\n    }\n    return res;\n}\n#line 4 \"tests/aoj/ALDS1_5_D.test.cpp\"\
     \nint main() {\n    int N;\n    std::cin>>N;\n    std::vector<int> A(N);\n   \
     \ for(int i=0;i<N;++i)std::cin>>A[i];\n    std::cout<<inversion(A)<<std::endl;\n\
     }\n"
@@ -69,16 +71,16 @@ data:
   - data-structure/inversion-number.hpp
   - data-structure/binary-indexed-tree.hpp
   - others/compressor.hpp
-  isVerificationFile: false
-  path: tests/aoj/ALDS1_5_D.cpp
+  isVerificationFile: true
+  path: tests/aoj/ALDS1_5_D.test.cpp
   requiredBy: []
-  timestamp: '2024-01-19 15:02:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-01-19 15:09:20+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/aoj/ALDS1_5_D.cpp
+documentation_of: tests/aoj/ALDS1_5_D.test.cpp
 layout: document
 redirect_from:
-- /library/tests/aoj/ALDS1_5_D.cpp
-- /library/tests/aoj/ALDS1_5_D.cpp.html
-title: tests/aoj/ALDS1_5_D.cpp
+- /verify/tests/aoj/ALDS1_5_D.test.cpp
+- /verify/tests/aoj/ALDS1_5_D.test.cpp.html
+title: tests/aoj/ALDS1_5_D.test.cpp
 ---

@@ -5,10 +5,13 @@ data:
   - icon: ':warning:'
     path: graph/kruskal.hpp
     title: Kruskal
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_1_A.test.cpp
+    title: tests/aoj/DSL_1_A.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: UnionFind
     links: []
@@ -19,9 +22,9 @@ data:
     \   int leader(int x) {\n        return (ps[x] == x ? x : ps[x] = leader(ps[x]));\n\
     \    }\n    bool same(int x, int y) {\n        return leader(x) == leader(y);\n\
     \    }\n    int unite(int x, int y) {\n        x = leader(x); y = leader(y);\n\
-    \        if(x == y) return x;\n        if(sz[x] < sz[y]) swap(x, y);\n       \
-    \ sz[x] += sz[y];\n        ps[y] = x;\n        cnt--;\n        return x;\n   \
-    \ }\n    int size(int x) {\n        return sz[leader(x)];\n    }\n    std::vector<std::vector<int>>\
+    \        if(x == y) return x;\n        if(sz[x] < sz[y]) std::swap(x, y);\n  \
+    \      sz[x] += sz[y];\n        ps[y] = x;\n        cnt--;\n        return x;\n\
+    \    }\n    int size(int x) {\n        return sz[leader(x)];\n    }\n    std::vector<std::vector<int>>\
     \ groups() {\n        std::vector<std::vector<int>> res(n);\n        for(int i\
     \ = 0; i < n; ++i) res[leader(i)].push_back(i);\n        res.erase(std::remove_if(res.begin(),\
     \ res.end(), [&](const std::vector<int>& v) {return v.empty();}), res.end());\n\
@@ -34,11 +37,11 @@ data:
     \    return (ps[x] == x ? x : ps[x] = leader(ps[x]));\n    }\n    bool same(int\
     \ x, int y) {\n        return leader(x) == leader(y);\n    }\n    int unite(int\
     \ x, int y) {\n        x = leader(x); y = leader(y);\n        if(x == y) return\
-    \ x;\n        if(sz[x] < sz[y]) swap(x, y);\n        sz[x] += sz[y];\n       \
-    \ ps[y] = x;\n        cnt--;\n        return x;\n    }\n    int size(int x) {\n\
-    \        return sz[leader(x)];\n    }\n    std::vector<std::vector<int>> groups()\
-    \ {\n        std::vector<std::vector<int>> res(n);\n        for(int i = 0; i <\
-    \ n; ++i) res[leader(i)].push_back(i);\n        res.erase(std::remove_if(res.begin(),\
+    \ x;\n        if(sz[x] < sz[y]) std::swap(x, y);\n        sz[x] += sz[y];\n  \
+    \      ps[y] = x;\n        cnt--;\n        return x;\n    }\n    int size(int\
+    \ x) {\n        return sz[leader(x)];\n    }\n    std::vector<std::vector<int>>\
+    \ groups() {\n        std::vector<std::vector<int>> res(n);\n        for(int i\
+    \ = 0; i < n; ++i) res[leader(i)].push_back(i);\n        res.erase(std::remove_if(res.begin(),\
     \ res.end(), [&](const std::vector<int>& v) {return v.empty();}), res.end());\n\
     \        return res;\n    }\n    int count() const {\n        return cnt;\n  \
     \  }\n};"
@@ -47,9 +50,10 @@ data:
   path: data-structure/union-find.hpp
   requiredBy:
   - graph/kruskal.hpp
-  timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2024-01-19 15:09:20+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/aoj/DSL_1_A.test.cpp
 documentation_of: data-structure/union-find.hpp
 layout: document
 redirect_from:

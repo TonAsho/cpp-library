@@ -14,7 +14,7 @@ data:
     - icon: ':warning:'
       path: data-structure/cumulative-sum-2d.hpp
       title: CumulativeSum2D
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/inversion-number.hpp
       title: Inversion Number
     - icon: ':warning:'
@@ -23,7 +23,7 @@ data:
     - icon: ':warning:'
       path: data-structure/segment-tree.hpp
       title: SegmentTree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/union-find.hpp
       title: UnionFind
     - icon: ':warning:'
@@ -65,7 +65,7 @@ data:
       title: math/prime-factor.hpp
   - name: others
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: others/compressor.hpp
       title: others/compressor.hpp
     - icon: ':warning:'
@@ -96,11 +96,6 @@ data:
     - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
-  - name: tests/aoj
-    pages:
-    - icon: ':warning:'
-      path: tests/aoj/ALDS1_5_D.cpp
-      title: tests/aoj/ALDS1_5_D.cpp
   - name: tests/yosupo
     pages:
     - icon: ':warning:'
@@ -109,6 +104,12 @@ data:
   verificationCategories:
   - name: tests/aoj
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/ALDS1_5_D.test.cpp
+      title: tests/aoj/ALDS1_5_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/DSL_1_A.test.cpp
+      title: tests/aoj/DSL_1_A.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/aoj/DSL_2_B.test.cpp
       title: tests/aoj/DSL_2_B.test.cpp

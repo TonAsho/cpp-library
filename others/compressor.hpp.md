@@ -2,16 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/inversion-number.hpp
     title: Inversion Number
-  - icon: ':warning:'
-    path: tests/aoj/ALDS1_5_D.cpp
-    title: tests/aoj/ALDS1_5_D.cpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/ALDS1_5_D.test.cpp
+    title: tests/aoj/ALDS1_5_D.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"others/compressor.hpp\"\n#include <bits/stdc++.h>\ntemplate<typename\
@@ -64,10 +64,10 @@ data:
   path: others/compressor.hpp
   requiredBy:
   - data-structure/inversion-number.hpp
-  - tests/aoj/ALDS1_5_D.cpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/aoj/ALDS1_5_D.test.cpp
 documentation_of: others/compressor.hpp
 layout: document
 redirect_from:

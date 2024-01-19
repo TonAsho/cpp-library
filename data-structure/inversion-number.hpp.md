@@ -4,17 +4,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/binary-indexed-tree.hpp
     title: BinaryIndexedTree
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: others/compressor.hpp
     title: others/compressor.hpp
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tests/aoj/ALDS1_5_D.cpp
-    title: tests/aoj/ALDS1_5_D.cpp
-  _extendedVerifiedWith: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/ALDS1_5_D.test.cpp
+    title: tests/aoj/ALDS1_5_D.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Inversion Number
     links: []
@@ -70,11 +70,11 @@ data:
   - others/compressor.hpp
   isVerificationFile: false
   path: data-structure/inversion-number.hpp
-  requiredBy:
-  - tests/aoj/ALDS1_5_D.cpp
+  requiredBy: []
   timestamp: '2024-01-19 15:02:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/aoj/ALDS1_5_D.test.cpp
 documentation_of: data-structure/inversion-number.hpp
 layout: document
 redirect_from:
