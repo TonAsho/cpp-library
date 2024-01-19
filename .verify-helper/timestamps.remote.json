@@ -4,6 +4,7 @@
 "tests/aoj/DSL_2_A.test.cpp": "2024-01-19 15:38:48 +0900",
 "tests/aoj/DSL_2_B.test.cpp": "2023-12-18 16:56:14 +0900",
 "tests/aoj/DSL_2_B_2.test.cpp": "2024-01-19 15:38:48 +0900",
+"tests/aoj/DSL_2_G.test.cpp": "2024-01-19 16:44:00 +0900",
 "tests/aoj/GRL_5_C.test.cpp": "2023-12-19 23:17:41 +0900",
 "tests/aoj/GRL_5_D.test.cpp": "2023-12-19 23:17:41 +0900",
 "tests/yosupo/lca_euler_tour.test.cpp": "2023-12-19 23:17:41 +0900",
