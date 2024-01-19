@@ -29,7 +29,7 @@ struct LazySegmentTree {
         data[k] = Aop(x, data[k], d);
         if (k < n) {
             if (lazyflag[k]) {
-                lazy[k] = E::op(x, lazy[k]);
+                lazy[k] = E::op(lazy[k], x);
             }
             else {
                 lazy[k] = x;
