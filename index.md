@@ -12,7 +12,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/inversion-number.hpp
       title: Inversion Number
-    - icon: ':warning:'
+    - icon: ':question:'
       path: data-structure/lazy-segment-tree.hpp
       title: LazySegmentTree
     - icon: ':heavy_check_mark:'
@@ -63,7 +63,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: others/compressor.hpp
       title: others/compressor.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: others/monoid.hpp
       title: others/monoid.hpp
     - icon: ':warning:'
@@ -76,7 +76,7 @@ data:
       title: RollingHash
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/alias.hpp
       title: template/alias.hpp
     - icon: ':warning:'
@@ -114,6 +114,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aoj/DSL_2_B_2.test.cpp
       title: tests/aoj/DSL_2_B_2.test.cpp
+    - icon: ':x:'
+      path: tests/aoj/DSL_2_F.test.cpp
+      title: tests/aoj/DSL_2_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/DSL_2_G.test.cpp
+      title: tests/aoj/DSL_2_G.test.cpp
+    - icon: ':x:'
+      path: tests/aoj/DSL_2_H.test.cpp
+      title: tests/aoj/DSL_2_H.test.cpp
+    - icon: ':x:'
+      path: tests/aoj/DSL_2_I.test.cpp
+      title: tests/aoj/DSL_2_I.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/aoj/GRL_5_C.test.cpp
       title: tests/aoj/GRL_5_C.test.cpp

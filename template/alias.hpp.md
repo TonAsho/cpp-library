@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':question:'
     path: data-structure/lazy-segment-tree.hpp
     title: LazySegmentTree
   - icon: ':heavy_check_mark:'
@@ -11,7 +11,7 @@ data:
   - icon: ':warning:'
     path: math/modint.hpp
     title: ModInt
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: others/monoid.hpp
     title: others/monoid.hpp
   - icon: ':warning:'
@@ -24,12 +24,24 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_B_2.test.cpp
     title: tests/aoj/DSL_2_B_2.test.cpp
+  - icon: ':x:'
+    path: tests/aoj/DSL_2_F.test.cpp
+    title: tests/aoj/DSL_2_F.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/DSL_2_G.test.cpp
+    title: tests/aoj/DSL_2_G.test.cpp
+  - icon: ':x:'
+    path: tests/aoj/DSL_2_H.test.cpp
+    title: tests/aoj/DSL_2_H.test.cpp
+  - icon: ':x:'
+    path: tests/aoj/DSL_2_I.test.cpp
+    title: tests/aoj/DSL_2_I.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/point_add_range_sum_2.test.cpp
     title: tests/yosupo/point_add_range_sum_2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template/alias.hpp\"\n#include <bits/stdc++.h>\n\nusing\
@@ -68,11 +80,15 @@ data:
   - template/template.hpp
   - others/monoid.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/yosupo/point_add_range_sum_2.test.cpp
+  - tests/aoj/DSL_2_H.test.cpp
   - tests/aoj/DSL_2_A.test.cpp
+  - tests/aoj/DSL_2_F.test.cpp
+  - tests/aoj/DSL_2_G.test.cpp
   - tests/aoj/DSL_2_B_2.test.cpp
+  - tests/aoj/DSL_2_I.test.cpp
 documentation_of: template/alias.hpp
 layout: document
 redirect_from:

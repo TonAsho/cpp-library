@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/segment-tree.hpp
     title: SegmentTree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: others/monoid.hpp
     title: others/monoid.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/alias.hpp
     title: template/alias.hpp
   _extendedRequiredBy: []
