@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/lazy-segment-tree.hpp
     title: LazySegmentTree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: others/monoid.hpp
     title: others/monoid.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/alias.hpp
     title: template/alias.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_H
@@ -161,13 +161,13 @@ data:
     \                return r + 1 - n;\n            }\n            sm = M::op(data[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
     \ 4 \"tests/aoj/DSL_2_H.test.cpp\"\n\nint main(){\n    int N,Q;\n    std::cin>>N>>Q;\n\
-    \    LazySegmentTree<Monoid::AddMin<ll>> seg(N);\n    while(Q--){\n        int\
+    \    LazySegmentTree<Monoid::AddMin<ll>> seg(N,0);\n    while(Q--){\n        int\
     \ op,x,y,val;\n        std::cin>>op>>x>>y;\n        if(op==0){\n            std::cin>>val;\n\
     \            seg.apply(x,y+1,val);\n        }else{\n            std::cout<<seg.prod(x,y+1)<<std::endl;\n\
     \        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_H\"\n#include\
     \ <bits/stdc++.h>\n#include \"data-structure/lazy-segment-tree.hpp\"\n\nint main(){\n\
-    \    int N,Q;\n    std::cin>>N>>Q;\n    LazySegmentTree<Monoid::AddMin<ll>> seg(N);\n\
+    \    int N,Q;\n    std::cin>>N>>Q;\n    LazySegmentTree<Monoid::AddMin<ll>> seg(N,0);\n\
     \    while(Q--){\n        int op,x,y,val;\n        std::cin>>op>>x>>y;\n     \
     \   if(op==0){\n            std::cin>>val;\n            seg.apply(x,y+1,val);\n\
     \        }else{\n            std::cout<<seg.prod(x,y+1)<<std::endl;\n        }\n\
@@ -179,8 +179,8 @@ data:
   isVerificationFile: true
   path: tests/aoj/DSL_2_H.test.cpp
   requiredBy: []
-  timestamp: '2024-01-19 17:45:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-01-19 17:51:22+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/aoj/DSL_2_H.test.cpp
 layout: document

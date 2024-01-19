@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/lazy-segment-tree.hpp
     title: LazySegmentTree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: others/monoid.hpp
     title: others/monoid.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/alias.hpp
     title: template/alias.hpp
   _extendedRequiredBy: []
@@ -161,14 +161,14 @@ data:
     \                return r + 1 - n;\n            }\n            sm = M::op(data[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
     \ 4 \"tests/aoj/DSL_2_F.test.cpp\"\n\nint main(){\n    int N,Q;\n    std::cin>>N>>Q;\n\
-    \    LazySegmentTree<Monoid::AssignMin<ll,(1ll<<31)-1>> RMQ(N);\n    while(Q--){\n\
+    \    LazySegmentTree<Monoid::AssignMin<ll>> RMQ(N,(1ll<<31)-1);\n    while(Q--){\n\
     \        int op,x,y,val;\n        std::cin>>op>>x>>y;\n        if(op==0){\n  \
     \          std::cin>>val;\n            RMQ.apply(x,y+1,val);\n        }else{\n\
     \            std::cout<<RMQ.prod(x,y+1)<<std::endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_F\"\n#include\
     \ <bits/stdc++.h>\n#include \"data-structure/lazy-segment-tree.hpp\"\n\nint main(){\n\
-    \    int N,Q;\n    std::cin>>N>>Q;\n    LazySegmentTree<Monoid::AssignMin<ll,(1ll<<31)-1>>\
-    \ RMQ(N);\n    while(Q--){\n        int op,x,y,val;\n        std::cin>>op>>x>>y;\n\
+    \    int N,Q;\n    std::cin>>N>>Q;\n    LazySegmentTree<Monoid::AssignMin<ll>>\
+    \ RMQ(N,(1ll<<31)-1);\n    while(Q--){\n        int op,x,y,val;\n        std::cin>>op>>x>>y;\n\
     \        if(op==0){\n            std::cin>>val;\n            RMQ.apply(x,y+1,val);\n\
     \        }else{\n            std::cout<<RMQ.prod(x,y+1)<<std::endl;\n        }\n\
     \    }\n}"
@@ -179,7 +179,7 @@ data:
   isVerificationFile: true
   path: tests/aoj/DSL_2_F.test.cpp
   requiredBy: []
-  timestamp: '2024-01-19 17:45:53+09:00'
+  timestamp: '2024-01-19 17:51:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/aoj/DSL_2_F.test.cpp
