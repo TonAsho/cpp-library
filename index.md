@@ -1,11 +1,6 @@
 ---
 data:
   libraryCategories:
-  - name: cpp-library/math
-    pages:
-    - icon: ':warning:'
-      path: cpp-library/math/prime-factor.hpp
-      title: cpp-library/math/prime-factor.hpp
   - name: data-structure
     pages:
     - icon: ':heavy_check_mark:'
@@ -127,6 +122,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/point_add_range_sum.test.cpp
       title: tests/yosupo/point_add_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/unionfind.test.cpp
+      title: tests/yosupo/unionfind.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/vertex_add_subtree_sum.test.cpp
       title: tests/yosupo/vertex_add_subtree_sum.test.cpp
