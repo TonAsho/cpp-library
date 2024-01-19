@@ -24,6 +24,11 @@ struct SegmentTree {
         data[x] = val;
         while(x >>= 1) data[x] = M::op(data[x << 1], data[x << 1 ^ 1]);
     }
+    void apply(int x, T val) {
+        x += sz;
+        data[x] = M::op(data[x],val);
+        while(x >>= 1) data[x] = M::op(data[x << 1], data[x << 1 ^ 1]);
+    }
     T prod(int l, int r) const {
         l += sz, r += sz;
         T lsm = M::id(), rsm = M::id();

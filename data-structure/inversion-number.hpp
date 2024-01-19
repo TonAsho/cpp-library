@@ -12,7 +12,7 @@ long long inversion(std::vector<T> a) {
     c.build();
     std::vector<int> b = c.pressed(a);
     long long res = 0;
-    BinaryIndexedTree<ll> bit(c.size());
+    BinaryIndexedTree<long long> bit(c.size());
     for(int i = 0; i < n; ++i) {
         res += i - bit.sum(0, b[i] + 1);
         bit.add(b[i], 1);
