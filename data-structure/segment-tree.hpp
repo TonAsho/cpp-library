@@ -19,15 +19,17 @@ struct SegmentTree {
         for(int i = 0; i < n; ++i) data[sz + i] = v[i];
         for(int i = sz - 1; i >= 1; i--) data[i] = M::op(data[i << 1], data[i << 1 ^ 1]);
     }
-    void update(int x, T val) {
-        x += sz;
-        data[x] = val;
-        while(x >>= 1) data[x] = M::op(data[x << 1], data[x << 1 ^ 1]);
+    template<class Upd>
+    void update(int k,const Upd &upd){
+        k += sz;
+        data[k] = upd(data[k]);
+        while(k >>= 1) data[k] = M::op(data[k << 1], data[k << 1^1]);
     }
-    void apply(int x, T val) {
-        x += sz;
-        data[x] = M::op(data[x],val);
-        while(x >>= 1) data[x] = M::op(data[x << 1], data[x << 1 ^ 1]);
+    void set(int k,const T &x){
+        update(k, [&](T) -> T { return x; });
+    }
+    void apply(int k,const T &x){
+        update(k, [&](T y) -> T { return M::op(y, x); });
     }
     T prod(int l, int r) const {
         l += sz, r += sz;
