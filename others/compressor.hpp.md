@@ -5,6 +5,9 @@ data:
   - icon: ':warning:'
     path: data-structure/inversion-number.hpp
     title: Inversion Number
+  - icon: ':warning:'
+    path: tests/aoj/ALDS1_5_D.cpp
+    title: tests/aoj/ALDS1_5_D.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -61,6 +64,7 @@ data:
   path: others/compressor.hpp
   requiredBy:
   - data-structure/inversion-number.hpp
+  - tests/aoj/ALDS1_5_D.cpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

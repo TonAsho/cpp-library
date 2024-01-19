@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: cpp-library/math
+    pages:
+    - icon: ':warning:'
+      path: cpp-library/math/prime-factor.hpp
+      title: cpp-library/math/prime-factor.hpp
   - name: data-structure
     pages:
     - icon: ':heavy_check_mark:'
@@ -33,6 +38,9 @@ data:
       path: graph/detect-cycle.hpp
       title: DetectCycle
     - icon: ':warning:'
+      path: graph/dijkstra-path.hpp
+      title: Dijkstra Path
+    - icon: ':warning:'
       path: graph/dijkstra.hpp
       title: Dijkstra
     - icon: ':heavy_check_mark:'
@@ -52,6 +60,9 @@ data:
     - icon: ':warning:'
       path: math/modint.hpp
       title: ModInt
+    - icon: ':warning:'
+      path: math/prime-factor.hpp
+      title: math/prime-factor.hpp
   - name: others
     pages:
     - icon: ':warning:'
@@ -85,6 +96,11 @@ data:
     - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
+  - name: tests/aoj
+    pages:
+    - icon: ':warning:'
+      path: tests/aoj/ALDS1_5_D.cpp
+      title: tests/aoj/ALDS1_5_D.cpp
   - name: tests/yosupo
     pages:
     - icon: ':warning:'

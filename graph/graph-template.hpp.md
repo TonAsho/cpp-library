@@ -9,6 +9,9 @@ data:
     path: graph/detect-cycle.hpp
     title: DetectCycle
   - icon: ':warning:'
+    path: graph/dijkstra-path.hpp
+    title: Dijkstra Path
+  - icon: ':warning:'
     path: graph/dijkstra.hpp
     title: Dijkstra
   - icon: ':heavy_check_mark:'
@@ -88,6 +91,7 @@ data:
   - graph/lca.hpp
   - graph/detect-cycle.hpp
   - graph/bellman-ford.hpp
+  - graph/dijkstra-path.hpp
   - graph/dijkstra.hpp
   - tests/yosupo/vertex_add_path_sum.tset.cpp
   timestamp: '2023-12-18 16:56:14+09:00'

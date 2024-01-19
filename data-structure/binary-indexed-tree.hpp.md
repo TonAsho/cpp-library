@@ -6,6 +6,9 @@ data:
     path: data-structure/inversion-number.hpp
     title: Inversion Number
   - icon: ':warning:'
+    path: tests/aoj/ALDS1_5_D.cpp
+    title: tests/aoj/ALDS1_5_D.cpp
+  - icon: ':warning:'
     path: tests/yosupo/vertex_add_path_sum.tset.cpp
     title: tests/yosupo/vertex_add_path_sum.tset.cpp
   _extendedVerifiedWith:
@@ -55,6 +58,7 @@ data:
   requiredBy:
   - data-structure/inversion-number.hpp
   - tests/yosupo/vertex_add_path_sum.tset.cpp
+  - tests/aoj/ALDS1_5_D.cpp
   timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

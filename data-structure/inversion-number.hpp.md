@@ -7,7 +7,10 @@ data:
   - icon: ':warning:'
     path: others/compressor.hpp
     title: others/compressor.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: tests/aoj/ALDS1_5_D.cpp
+    title: tests/aoj/ALDS1_5_D.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -52,23 +55,24 @@ data:
     \ 5 \"data-structure/inversion-number.hpp\"\n/**\n * @brief Inversion Number\n\
     */\ntemplate<typename T>\nlong long inversion(std::vector<T> a) {\n    int n =\
     \ a.size();\n    Compressor<int> c(a);\n    c.build();\n    std::vector<int> b\
-    \ = c.pressed(a);\n    long long res = 0;\n    BinaryIndexedTree<ll> bit(c.size());\n\
+    \ = c.pressed(a);\n    long long res = 0;\n    BinaryIndexedTree<long long> bit(c.size());\n\
     \    for(int i = 0; i < n; ++i) {\n        res += i - bit.sum(0, b[i] + 1);\n\
     \        bit.add(b[i], 1);\n    }\n    return res;\n}\n"
   code: "#pragma once\n#include <bits/stdc++.h>\n#include \"./binary-indexed-tree.hpp\"\
     \n#include \"../others/compressor.hpp\"\n/**\n * @brief Inversion Number\n*/\n\
     template<typename T>\nlong long inversion(std::vector<T> a) {\n    int n = a.size();\n\
     \    Compressor<int> c(a);\n    c.build();\n    std::vector<int> b = c.pressed(a);\n\
-    \    long long res = 0;\n    BinaryIndexedTree<ll> bit(c.size());\n    for(int\
-    \ i = 0; i < n; ++i) {\n        res += i - bit.sum(0, b[i] + 1);\n        bit.add(b[i],\
-    \ 1);\n    }\n    return res;\n}"
+    \    long long res = 0;\n    BinaryIndexedTree<long long> bit(c.size());\n   \
+    \ for(int i = 0; i < n; ++i) {\n        res += i - bit.sum(0, b[i] + 1);\n   \
+    \     bit.add(b[i], 1);\n    }\n    return res;\n}"
   dependsOn:
   - data-structure/binary-indexed-tree.hpp
   - others/compressor.hpp
   isVerificationFile: false
   path: data-structure/inversion-number.hpp
-  requiredBy: []
-  timestamp: '2023-12-18 16:56:14+09:00'
+  requiredBy:
+  - tests/aoj/ALDS1_5_D.cpp
+  timestamp: '2024-01-19 15:02:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/inversion-number.hpp
