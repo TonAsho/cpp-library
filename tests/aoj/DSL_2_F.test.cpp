@@ -5,7 +5,7 @@
 int main(){
     int N,Q;
     std::cin>>N>>Q;
-    LazySegmentTree<Monoid::AssignMin<ll,(1ll<<31)-1>> RMQ(N);
+    LazySegmentTree<Monoid::AssignMin<ll>> RMQ(N,(1ll<<31)-1);
     while(Q--){
         int op,x,y,val;
         std::cin>>op>>x>>y;

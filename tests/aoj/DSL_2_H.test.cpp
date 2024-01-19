@@ -5,7 +5,7 @@
 int main(){
     int N,Q;
     std::cin>>N>>Q;
-    LazySegmentTree<Monoid::AddMin<ll>> seg(N);
+    LazySegmentTree<Monoid::AddMin<ll>> seg(N,0);
     while(Q--){
         int op,x,y,val;
         std::cin>>op>>x>>y;
