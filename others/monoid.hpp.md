@@ -18,7 +18,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_B_2.test.cpp
     title: tests/aoj/DSL_2_B_2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_F.test.cpp
     title: tests/aoj/DSL_2_F.test.cpp
   - icon: ':heavy_check_mark:'
@@ -27,7 +27,7 @@ data:
   - icon: ':x:'
     path: tests/aoj/DSL_2_H.test.cpp
     title: tests/aoj/DSL_2_H.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_I.test.cpp
     title: tests/aoj/DSL_2_I.test.cpp
   - icon: ':heavy_check_mark:'

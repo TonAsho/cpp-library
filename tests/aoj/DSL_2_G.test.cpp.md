@@ -96,7 +96,7 @@ data:
     \ = nullptr>\n    static inline T Aop(const U& a, const T& b, int c) {\n     \
     \   return A::mul_op(a, c, b);\n    }\n    void all_apply(int k, const U& x, int\
     \ d) {\n        data[k] = Aop(x, data[k], d);\n        if (k < n) {\n        \
-    \    if (lazyflag[k]) {\n                lazy[k] = E::op(x, lazy[k]);\n      \
+    \    if (lazyflag[k]) {\n                lazy[k] = E::op(lazy[k], x);\n      \
     \      }\n            else {\n                lazy[k] = x;\n                lazyflag[k]\
     \ = true;\n            }\n        }\n    }\n    void eval(int k, int d) {\n  \
     \      if (lazyflag[k]) {\n            all_apply(k << 1, lazy[k], d >> 1);\n \
@@ -179,7 +179,7 @@ data:
   isVerificationFile: true
   path: tests/aoj/DSL_2_G.test.cpp
   requiredBy: []
-  timestamp: '2024-01-19 16:44:00+09:00'
+  timestamp: '2024-01-19 17:45:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/aoj/DSL_2_G.test.cpp
