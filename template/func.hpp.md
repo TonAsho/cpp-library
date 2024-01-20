@@ -5,6 +5,9 @@ data:
   - icon: ':warning:'
     path: template/template.hpp
     title: template/template.hpp
+  - icon: ':warning:'
+    path: tests/joi/joi2009ho_c.cpp
+    title: joi2009ho_c
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -78,6 +81,7 @@ data:
   path: template/func.hpp
   requiredBy:
   - template/template.hpp
+  - tests/joi/joi2009ho_c.cpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -94,6 +94,11 @@ data:
     - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
+  - name: tests/joi
+    pages:
+    - icon: ':warning:'
+      path: tests/joi/joi2009ho_c.cpp
+      title: joi2009ho_c
   - name: tests/yosupo
     pages:
     - icon: ':warning:'

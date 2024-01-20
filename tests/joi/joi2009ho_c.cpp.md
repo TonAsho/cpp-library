@@ -13,19 +13,21 @@ data:
   - icon: ':warning:'
     path: template/macro.hpp
     title: template/macro.hpp
-  _extendedRequiredBy:
   - icon: ':warning:'
-    path: tests/joi/joi2009ho_c.cpp
-    title: joi2009ho_c
+    path: template/template.hpp
+    title: template/template.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links: []
-  bundledCode: "#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false);\
-    \ _main(); return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
+    links:
+    - https://atcoder.jp/contests/joi2009ho/tasks/joi2009ho_c
+  bundledCode: "#line 1 \"tests/joi/joi2009ho_c.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2009ho/tasks/joi2009ho_c\"\
+    \n#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main();\
+    \ return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
     \ e\n#define SELECT3(a,b,c,d,...) d\n#define REP1(a) for(ll i = 0; i < (ll)(a);\
     \ ++i)\n#define REP2(i, a) for(ll i = 0; i < (ll)(a); ++i)\n#define REP3(i, a,\
     \ b) for(ll i = (ll)(a); i < (ll)(b); ++i)\n#define REP4(i, a, b, c) for(ll i\
@@ -113,39 +115,65 @@ data:
     \        b>>=1;\n    }\n    return res;\n}\ninline ll mod_inv(ll a, const ll &mod){\n\
     \    ll b=mod,x=1,u=0,t;\n    while(b){\n        t=a/b;\n        std::swap(a-=t*b,b);\n\
     \        std::swap(x-=t*u,u);\n    }\n    if(x<0)x+=mod;\n    return x;\n}\n#line\
-    \ 9 \"template/template.hpp\"\n"
-  code: '#pragma once
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-    void _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main(); return
-    0;}
-
-    #include "./macro.hpp"
-
-    #include "./alias.hpp"
-
-    #include "./inout.hpp"
-
-    #include "./func.hpp"'
+    \ 3 \"tests/joi/joi2009ho_c.cpp\"\n\nvoid _main() {\n    //\u305D\u3053\u304B\u3089\
+    \u59CB\u3081\u305F\u3089\u4F55\u306B\u306A\u308B\u304B\n    //\u305D\u3053\u3092\
+    \u901A\u308B\u3084\u3064\u306E\u6570\n    INT(N,M,H,K);\n    vi S(N); input(S);\n\
+    \    vector P(N,vector<array<int,4>>());\n    //[0]=\u9AD8\u3055\u3001[1]=+-1\u3001\
+    [2]=\u305F\u3069\u308A\u7740\u304F\u6570\u3001[3]=\u901A\u308B\u6570\u306E\u500B\
+    \u6570\n    rep(i,M){\n        INT(l,h);\n        l--;\n        P[l].pb({h,1,0,0});\n\
+    \        P[l+1].pb({h,-1,0,0});\n    }\n    for(auto &x:P){\n        sort(all(x));\n\
+    \    }\n    int sum=0;\n    rep(i,N){\n        int x=i,h=0;\n        int now=0;\n\
+    \        while(1){\n            auto it=lower_bound(all(P[x]),array{h+1,-1,0,0});\n\
+    \            if(it==P[x].end()){\n                now=S[x];\n                break;\n\
+    \            }\n            h=(*it)[0];\n            x+=(*it)[1];\n        }\n\
+    \        x=i,h=0;\n        while(1){\n            int it=lower_bound(all(P[x]),array{h+1,-1,0,0})-P[x].begin();\n\
+    \            if(it==P[x].size()){\n                break;\n            }\n   \
+    \         if(h!=P[x][it][0]){\n                P[x][it][2]=now;\n            \
+    \    if(i<K)\n                    P[x][it][3]++;\n            }\n            h=P[x][it][0];\n\
+    \            x+=P[x][it][1];\n        }\n        if(i<K)sum+=now;\n    }\n   \
+    \ int ans=sum;\n    rep(i,N)for(auto x:P[i]){\n        int now=sum;\n        array\
+    \ it=*lower_bound(all(P[i+x[1]]),array{x[0],-1,0,0});\n        {\n           \
+    \ now-=x[2]*x[3];\n            now+=x[3]*it[2];\n        }\n        {\n      \
+    \      now-=it[2]*it[3];\n            now+=it[3]*x[2];\n        }\n        chmin(ans,now);\n\
+    \    }\n    print(ans);\n}\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2009ho/tasks/joi2009ho_c\"\
+    \n#include \"template/template.hpp\"\n\nvoid _main() {\n    //\u305D\u3053\u304B\
+    \u3089\u59CB\u3081\u305F\u3089\u4F55\u306B\u306A\u308B\u304B\n    //\u305D\u3053\
+    \u3092\u901A\u308B\u3084\u3064\u306E\u6570\n    INT(N,M,H,K);\n    vi S(N); input(S);\n\
+    \    vector P(N,vector<array<int,4>>());\n    //[0]=\u9AD8\u3055\u3001[1]=+-1\u3001\
+    [2]=\u305F\u3069\u308A\u7740\u304F\u6570\u3001[3]=\u901A\u308B\u6570\u306E\u500B\
+    \u6570\n    rep(i,M){\n        INT(l,h);\n        l--;\n        P[l].pb({h,1,0,0});\n\
+    \        P[l+1].pb({h,-1,0,0});\n    }\n    for(auto &x:P){\n        sort(all(x));\n\
+    \    }\n    int sum=0;\n    rep(i,N){\n        int x=i,h=0;\n        int now=0;\n\
+    \        while(1){\n            auto it=lower_bound(all(P[x]),array{h+1,-1,0,0});\n\
+    \            if(it==P[x].end()){\n                now=S[x];\n                break;\n\
+    \            }\n            h=(*it)[0];\n            x+=(*it)[1];\n        }\n\
+    \        x=i,h=0;\n        while(1){\n            int it=lower_bound(all(P[x]),array{h+1,-1,0,0})-P[x].begin();\n\
+    \            if(it==P[x].size()){\n                break;\n            }\n   \
+    \         if(h!=P[x][it][0]){\n                P[x][it][2]=now;\n            \
+    \    if(i<K)\n                    P[x][it][3]++;\n            }\n            h=P[x][it][0];\n\
+    \            x+=P[x][it][1];\n        }\n        if(i<K)sum+=now;\n    }\n   \
+    \ int ans=sum;\n    rep(i,N)for(auto x:P[i]){\n        int now=sum;\n        array\
+    \ it=*lower_bound(all(P[i+x[1]]),array{x[0],-1,0,0});\n        {\n           \
+    \ now-=x[2]*x[3];\n            now+=x[3]*it[2];\n        }\n        {\n      \
+    \      now-=it[2]*it[3];\n            now+=it[3]*x[2];\n        }\n        chmin(ans,now);\n\
+    \    }\n    print(ans);\n}"
   dependsOn:
+  - template/template.hpp
   - template/macro.hpp
   - template/alias.hpp
   - template/inout.hpp
   - template/func.hpp
   isVerificationFile: false
-  path: template/template.hpp
-  requiredBy:
-  - tests/joi/joi2009ho_c.cpp
-  timestamp: '2023-12-17 11:32:30+09:00'
+  path: tests/joi/joi2009ho_c.cpp
+  requiredBy: []
+  timestamp: '2024-01-20 15:35:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: template/template.hpp
+documentation_of: tests/joi/joi2009ho_c.cpp
 layout: document
-redirect_from:
-- /library/template/template.hpp
-- /library/template/template.hpp.html
-title: template/template.hpp
+title: joi2009ho_c
 ---
+## 考察
+この問題のACの中で最も汚い実装をした自信がある。汚い割には通って良かった(通ってなかったら発狂)。まず、それぞれの横のラインの左側と右側それぞれ、{高さ、左右、たどり着く数、通る数の個数}を持っておく。１つの横のラインを消したとき、合計値を操作すれば良い。全体の計算量は、 $O(NM\log N)$ ぐらい。
+

@@ -17,6 +17,9 @@ data:
   - icon: ':warning:'
     path: template/template.hpp
     title: template/template.hpp
+  - icon: ':warning:'
+    path: tests/joi/joi2009ho_c.cpp
+    title: joi2009ho_c
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_A.test.cpp
@@ -79,6 +82,7 @@ data:
   - math/modint.hpp
   - template/template.hpp
   - others/monoid.hpp
+  - tests/joi/joi2009ho_c.cpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
