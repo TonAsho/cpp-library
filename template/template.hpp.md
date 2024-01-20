@@ -1,26 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/alias.hpp
     title: template/alias.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: template/func.hpp
     title: template/func.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: template/inout.hpp
     title: template/inout.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: template/macro.hpp
     title: template/macro.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: tests/joi/joi2009ho_c.test.cpp
-    title: tests/joi/joi2009ho_c.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
@@ -139,9 +136,8 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - tests/joi/joi2009ho_c.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: template/template.hpp
 layout: document
 redirect_from:

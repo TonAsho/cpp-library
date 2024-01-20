@@ -2,16 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: template/template.hpp
     title: template/template.hpp
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: tests/joi/joi2009ho_c.test.cpp
-    title: tests/joi/joi2009ho_c.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: '#line 2 "template/macro.hpp"
@@ -126,9 +123,8 @@ data:
   requiredBy:
   - template/template.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - tests/joi/joi2009ho_c.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: template/macro.hpp
 layout: document
 redirect_from:
