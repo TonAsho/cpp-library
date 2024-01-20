@@ -15,5 +15,6 @@
 "tests/yosupo/point_add_range_sum.test.cpp": "2023-12-18 16:56:14 +0900",
 "tests/yosupo/point_add_range_sum_2.test.cpp": "2024-01-19 15:38:48 +0900",
 "tests/yosupo/unionfind.test.cpp": "2024-01-19 15:13:16 +0900",
+"tests/yosupo/vertex_add_path_sum.test.cpp": "2024-01-20 15:39:31 +0900",
 "tests/yosupo/vertex_add_subtree_sum.test.cpp": "2023-12-19 23:17:41 +0900"
 }
