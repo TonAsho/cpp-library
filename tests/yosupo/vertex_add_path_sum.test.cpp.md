@@ -14,11 +14,13 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/vertex_add_path_sum
     links:
     - https://judge.yosupo.jp/problem/vertex_add_path_sum
-  bundledCode: "#line 1 \"tests/yosupo/vertex_add_path_sum.tset.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"tests/yosupo/vertex_add_path_sum.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/vertex_add_path_sum\"\n#include <bits/stdc++.h>\n\
     #line 3 \"graph/graph-template.hpp\"\n/**\n * @brief Graph Template\n */\ntemplate<typename\
     \ T = int>\nstruct Edge {\n    int from, to;\n    T cost;\n    int idx;\n    Edge()\
@@ -84,7 +86,7 @@ data:
     \  x++;\n        while(x <= n) {\n            data[x] += val;\n            x +=\
     \ x & -x;\n        }\n    }\n    T sum(int l, int r) {\n        return sum(r)\
     \ - sum(l);\n    }\n    T operator[](int x) { return sum(x, x + 1); }\n};\n#line\
-    \ 5 \"tests/yosupo/vertex_add_path_sum.tset.cpp\"\n\nint main() {\n    std::ios::sync_with_stdio(false);\
+    \ 5 \"tests/yosupo/vertex_add_path_sum.test.cpp\"\n\nint main() {\n    std::ios::sync_with_stdio(false);\
     \ std::cin.tie(nullptr);\n    int N, Q;\n    std::cin >> N >> Q;\n    std::vector<long\
     \ long> A(N);\n    for(int i = 0; i < N; ++i) std:: cin >> A[i];\n    EulerTour<long\
     \ long> G(N);\n    G.read(N - 1, 0, false, false);\n    G.build(0);\n    BinaryIndexedTree<long\
@@ -114,16 +116,16 @@ data:
   - graph/euler-tour.hpp
   - graph/graph-template.hpp
   - data-structure/binary-indexed-tree.hpp
-  isVerificationFile: false
-  path: tests/yosupo/vertex_add_path_sum.tset.cpp
+  isVerificationFile: true
+  path: tests/yosupo/vertex_add_path_sum.test.cpp
   requiredBy: []
-  timestamp: '2023-12-19 23:17:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-01-20 15:39:31+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/yosupo/vertex_add_path_sum.tset.cpp
+documentation_of: tests/yosupo/vertex_add_path_sum.test.cpp
 layout: document
 redirect_from:
-- /library/tests/yosupo/vertex_add_path_sum.tset.cpp
-- /library/tests/yosupo/vertex_add_path_sum.tset.cpp.html
-title: tests/yosupo/vertex_add_path_sum.tset.cpp
+- /verify/tests/yosupo/vertex_add_path_sum.test.cpp
+- /verify/tests/yosupo/vertex_add_path_sum.test.cpp.html
+title: tests/yosupo/vertex_add_path_sum.test.cpp
 ---

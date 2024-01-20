@@ -4,10 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/graph-template.hpp
     title: Graph Template
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tests/yosupo/vertex_add_path_sum.tset.cpp
-    title: tests/yosupo/vertex_add_path_sum.tset.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/GRL_5_C.test.cpp
@@ -18,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/lca_euler_tour.test.cpp
     title: tests/yosupo/lca_euler_tour.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/yosupo/vertex_add_path_sum.test.cpp
+    title: tests/yosupo/vertex_add_path_sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/vertex_add_subtree_sum.test.cpp
     title: tests/yosupo/vertex_add_subtree_sum.test.cpp
@@ -121,13 +121,13 @@ data:
   - graph/graph-template.hpp
   isVerificationFile: false
   path: graph/euler-tour.hpp
-  requiredBy:
-  - tests/yosupo/vertex_add_path_sum.tset.cpp
+  requiredBy: []
   timestamp: '2023-12-19 23:17:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/yosupo/vertex_add_subtree_sum.test.cpp
   - tests/yosupo/lca_euler_tour.test.cpp
+  - tests/yosupo/vertex_add_path_sum.test.cpp
   - tests/aoj/GRL_5_C.test.cpp
   - tests/aoj/GRL_5_D.test.cpp
 documentation_of: graph/euler-tour.hpp

@@ -23,9 +23,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/topological-sort.hpp
     title: Topological Sort
-  - icon: ':warning:'
-    path: tests/yosupo/vertex_add_path_sum.tset.cpp
-    title: tests/yosupo/vertex_add_path_sum.tset.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/GRL_4_B.test.cpp
@@ -39,6 +36,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/lca_euler_tour.test.cpp
     title: tests/yosupo/lca_euler_tour.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/yosupo/vertex_add_path_sum.test.cpp
+    title: tests/yosupo/vertex_add_path_sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/vertex_add_subtree_sum.test.cpp
     title: tests/yosupo/vertex_add_subtree_sum.test.cpp
@@ -100,12 +100,12 @@ data:
   - graph/topological-sort.hpp
   - graph/dijkstra-path.hpp
   - graph/dijkstra.hpp
-  - tests/yosupo/vertex_add_path_sum.tset.cpp
   timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/yosupo/vertex_add_subtree_sum.test.cpp
   - tests/yosupo/lca_euler_tour.test.cpp
+  - tests/yosupo/vertex_add_path_sum.test.cpp
   - tests/aoj/GRL_5_C.test.cpp
   - tests/aoj/GRL_5_D.test.cpp
   - tests/aoj/GRL_4_B.test.cpp

@@ -99,11 +99,6 @@ data:
     - icon: ':warning:'
       path: tests/joi/joi2009ho_c.cpp
       title: joi2009ho_c
-  - name: tests/yosupo
-    pages:
-    - icon: ':warning:'
-      path: tests/yosupo/vertex_add_path_sum.tset.cpp
-      title: tests/yosupo/vertex_add_path_sum.tset.cpp
   verificationCategories:
   - name: tests/aoj
     pages:
@@ -157,6 +152,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/unionfind.test.cpp
       title: tests/yosupo/unionfind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/yosupo/vertex_add_path_sum.test.cpp
+      title: tests/yosupo/vertex_add_path_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/yosupo/vertex_add_subtree_sum.test.cpp
       title: tests/yosupo/vertex_add_subtree_sum.test.cpp

@@ -5,9 +5,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/inversion-number.hpp
     title: Inversion Number
-  - icon: ':warning:'
-    path: tests/yosupo/vertex_add_path_sum.tset.cpp
-    title: tests/yosupo/vertex_add_path_sum.tset.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/ALDS1_5_D.test.cpp
@@ -21,6 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/point_add_range_sum.test.cpp
     title: tests/yosupo/point_add_range_sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/yosupo/vertex_add_path_sum.test.cpp
+    title: tests/yosupo/vertex_add_path_sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/yosupo/vertex_add_subtree_sum.test.cpp
     title: tests/yosupo/vertex_add_subtree_sum.test.cpp
@@ -57,11 +57,11 @@ data:
   path: data-structure/binary-indexed-tree.hpp
   requiredBy:
   - data-structure/inversion-number.hpp
-  - tests/yosupo/vertex_add_path_sum.tset.cpp
   timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/yosupo/vertex_add_subtree_sum.test.cpp
+  - tests/yosupo/vertex_add_path_sum.test.cpp
   - tests/yosupo/point_add_range_sum.test.cpp
   - tests/aoj/GRL_5_D.test.cpp
   - tests/aoj/ALDS1_5_D.test.cpp
