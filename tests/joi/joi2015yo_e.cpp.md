@@ -13,25 +13,21 @@ data:
   - icon: ':warning:'
     path: template/macro.hpp
     title: template/macro.hpp
-  _extendedRequiredBy:
   - icon: ':warning:'
-    path: tests/joi/joi2009ho_c.cpp
-    title: joi2009ho_c
-  - icon: ':warning:'
-    path: tests/joi/joi2011ho4.cpp
-    title: joi2011ho4
-  - icon: ':warning:'
-    path: tests/joi/joi2015yo_e.cpp
-    title: joi2015yo_e
+    path: template/template.hpp
+    title: template/template.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links: []
-  bundledCode: "#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false);\
-    \ _main(); return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
+    links:
+    - https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_e
+  bundledCode: "#line 1 \"tests/joi/joi2015yo_e.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_e\"\
+    \n#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main();\
+    \ return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
     \ e\n#define SELECT3(a,b,c,d,...) d\n#define REP1(a) for(ll i = 0; i < (ll)(a);\
     \ ++i)\n#define REP2(i, a) for(ll i = 0; i < (ll)(a); ++i)\n#define REP3(i, a,\
     \ b) for(ll i = (ll)(a); i < (ll)(b); ++i)\n#define REP4(i, a, b, c) for(ll i\
@@ -119,41 +115,52 @@ data:
     \        b>>=1;\n    }\n    return res;\n}\ninline ll mod_inv(ll a, const ll &mod){\n\
     \    ll b=mod,x=1,u=0,t;\n    while(b){\n        t=a/b;\n        std::swap(a-=t*b,b);\n\
     \        std::swap(x-=t*u,u);\n    }\n    if(x<0)x+=mod;\n    return x;\n}\n#line\
-    \ 9 \"template/template.hpp\"\n"
-  code: '#pragma once
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-    void _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main(); return
-    0;}
-
-    #include "./macro.hpp"
-
-    #include "./alias.hpp"
-
-    #include "./inout.hpp"
-
-    #include "./func.hpp"'
+    \ 3 \"tests/joi/joi2015yo_e.cpp\"\n\nconst int dx[8]={-1,-1,-1,0,0,1,1,1};\nconst\
+    \ int dy[8]={-1,0,1,-1,1,-1,0,1};\nvoid _main() {\n    INT(H,W);\n    vs S(H);\
+    \ input(S);\n    vvi cnt(H,vi(W));\n    vvb vis(H,vb(W,false));\n    vector<pii>\
+    \ P1;\n    rep(i,H)rep(j,W)if(S[i][j]!='.'){\n        rep(k,8){\n            int\
+    \ h=i+dx[k],w=j+dy[k];\n            if(h<0||h>=H||w<0||w>=W)continue;\n      \
+    \      if(S[h][w]=='.')cnt[i][j]++;\n        }\n        if(S[i][j]-'0'<=cnt[i][j]&&!vis[i][j]){\n\
+    \            vis[i][j]=true;\n            P1.eb(i,j);\n        }\n    }\n    int\
+    \ ans=1;\n    while(1){\n        for(auto &[i,j]:P1)S[i][j]='.';\n        vector<pii>\
+    \ P2;\n        bool flg=false;\n        for(auto &[i,j]:P1){\n            rep(k,8){\n\
+    \                int h=i+dx[k],w=j+dy[k];\n                if(h<0||h>=H||w<0||w>=W)continue;\n\
+    \                if(S[h][w]=='.')continue;\n                cnt[h][w]++;\n   \
+    \             if(S[h][w]-'0'<=cnt[h][w]&&!vis[h][w]){\n                    vis[h][w]=true;\n\
+    \                    flg=true;\n                    P2.eb(h,w);\n            \
+    \    }\n            }   \n        }\n        if(!flg)break;\n        ans++;\n\
+    \        swap(P1,P2);\n    }\n    print(ans);\n}\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_e\"\
+    \n#include \"template/template.hpp\"\n\nconst int dx[8]={-1,-1,-1,0,0,1,1,1};\n\
+    const int dy[8]={-1,0,1,-1,1,-1,0,1};\nvoid _main() {\n    INT(H,W);\n    vs S(H);\
+    \ input(S);\n    vvi cnt(H,vi(W));\n    vvb vis(H,vb(W,false));\n    vector<pii>\
+    \ P1;\n    rep(i,H)rep(j,W)if(S[i][j]!='.'){\n        rep(k,8){\n            int\
+    \ h=i+dx[k],w=j+dy[k];\n            if(h<0||h>=H||w<0||w>=W)continue;\n      \
+    \      if(S[h][w]=='.')cnt[i][j]++;\n        }\n        if(S[i][j]-'0'<=cnt[i][j]&&!vis[i][j]){\n\
+    \            vis[i][j]=true;\n            P1.eb(i,j);\n        }\n    }\n    int\
+    \ ans=1;\n    while(1){\n        for(auto &[i,j]:P1)S[i][j]='.';\n        vector<pii>\
+    \ P2;\n        bool flg=false;\n        for(auto &[i,j]:P1){\n            rep(k,8){\n\
+    \                int h=i+dx[k],w=j+dy[k];\n                if(h<0||h>=H||w<0||w>=W)continue;\n\
+    \                if(S[h][w]=='.')continue;\n                cnt[h][w]++;\n   \
+    \             if(S[h][w]-'0'<=cnt[h][w]&&!vis[h][w]){\n                    vis[h][w]=true;\n\
+    \                    flg=true;\n                    P2.eb(h,w);\n            \
+    \    }\n            }   \n        }\n        if(!flg)break;\n        ans++;\n\
+    \        swap(P1,P2);\n    }\n    print(ans);\n}"
   dependsOn:
+  - template/template.hpp
   - template/macro.hpp
   - template/alias.hpp
   - template/inout.hpp
   - template/func.hpp
   isVerificationFile: false
-  path: template/template.hpp
-  requiredBy:
-  - tests/joi/joi2009ho_c.cpp
-  - tests/joi/joi2011ho4.cpp
-  - tests/joi/joi2015yo_e.cpp
-  timestamp: '2023-12-17 11:32:30+09:00'
+  path: tests/joi/joi2015yo_e.cpp
+  requiredBy: []
+  timestamp: '2024-01-20 17:24:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: template/template.hpp
+documentation_of: tests/joi/joi2015yo_e.cpp
 layout: document
-redirect_from:
-- /library/template/template.hpp
-- /library/template/template.hpp.html
-title: template/template.hpp
+title: joi2015yo_e
 ---
+## 考察
+実行時間制限が１０秒で、愚直に出来そう。そのまま実装してACしたが、blueberry君のbfsの方がよさそう。

@@ -23,6 +23,9 @@ data:
   - icon: ':warning:'
     path: tests/joi/joi2011ho4.cpp
     title: joi2011ho4
+  - icon: ':warning:'
+    path: tests/joi/joi2015yo_e.cpp
+    title: joi2015yo_e
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_A.test.cpp
@@ -87,6 +90,7 @@ data:
   - others/monoid.hpp
   - tests/joi/joi2009ho_c.cpp
   - tests/joi/joi2011ho4.cpp
+  - tests/joi/joi2015yo_e.cpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
