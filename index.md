@@ -79,19 +79,19 @@ data:
       title: RollingHash
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/alias.hpp
       title: template/alias.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: template/func.hpp
       title: template/func.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: template/inout.hpp
       title: template/inout.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: template/macro.hpp
       title: template/macro.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: template/template.hpp
       title: template/template.hpp
   - name: tests/yosupo
@@ -138,6 +138,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aoj/GRL_5_D.test.cpp
       title: tests/aoj/GRL_5_D.test.cpp
+  - name: tests/joi
+    pages:
+    - icon: ':x:'
+      path: tests/joi/joi2009ho_c.test.cpp
+      title: tests/joi/joi2009ho_c.test.cpp
   - name: tests/yosupo
     pages:
     - icon: ':heavy_check_mark:'

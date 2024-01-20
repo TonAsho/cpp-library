@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: template/template.hpp
     title: template/template.hpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: tests/joi/joi2009ho_c.test.cpp
+    title: tests/joi/joi2009ho_c.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: '#line 2 "template/inout.hpp"
@@ -239,8 +242,9 @@ data:
   requiredBy:
   - template/template.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - tests/joi/joi2009ho_c.test.cpp
 documentation_of: template/inout.hpp
 layout: document
 redirect_from:
