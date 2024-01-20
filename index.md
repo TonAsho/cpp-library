@@ -50,6 +50,9 @@ data:
     - icon: ':warning:'
       path: graph/lca.hpp
       title: LCA
+    - icon: ':heavy_check_mark:'
+      path: graph/topological-sort.hpp
+      title: Topological Sort
   - name: math
     pages:
     - icon: ':warning:'
@@ -126,6 +129,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aoj/DSL_2_I.test.cpp
       title: tests/aoj/DSL_2_I.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/aoj/GRL_4_B.test.cpp
+      title: tests/aoj/GRL_4_B.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/aoj/GRL_5_C.test.cpp
       title: tests/aoj/GRL_5_C.test.cpp

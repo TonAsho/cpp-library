@@ -20,10 +20,16 @@ data:
   - icon: ':warning:'
     path: graph/lca.hpp
     title: LCA
+  - icon: ':heavy_check_mark:'
+    path: graph/topological-sort.hpp
+    title: Topological Sort
   - icon: ':warning:'
     path: tests/yosupo/vertex_add_path_sum.tset.cpp
     title: tests/yosupo/vertex_add_path_sum.tset.cpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/aoj/GRL_4_B.test.cpp
+    title: tests/aoj/GRL_4_B.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/aoj/GRL_5_C.test.cpp
     title: tests/aoj/GRL_5_C.test.cpp
@@ -91,6 +97,7 @@ data:
   - graph/lca.hpp
   - graph/detect-cycle.hpp
   - graph/bellman-ford.hpp
+  - graph/topological-sort.hpp
   - graph/dijkstra-path.hpp
   - graph/dijkstra.hpp
   - tests/yosupo/vertex_add_path_sum.tset.cpp
@@ -101,6 +108,7 @@ data:
   - tests/yosupo/lca_euler_tour.test.cpp
   - tests/aoj/GRL_5_C.test.cpp
   - tests/aoj/GRL_5_D.test.cpp
+  - tests/aoj/GRL_4_B.test.cpp
 documentation_of: graph/graph-template.hpp
 layout: document
 redirect_from:
