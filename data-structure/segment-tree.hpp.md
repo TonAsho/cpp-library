@@ -164,9 +164,9 @@ data:
   timestamp: '2024-01-19 15:38:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/yosupo/point_add_range_sum_2.test.cpp
-  - tests/aoj/DSL_2_A.test.cpp
   - tests/aoj/DSL_2_B_2.test.cpp
+  - tests/aoj/DSL_2_A.test.cpp
+  - tests/yosupo/point_add_range_sum_2.test.cpp
 documentation_of: data-structure/segment-tree.hpp
 layout: document
 redirect_from:

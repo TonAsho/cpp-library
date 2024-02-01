@@ -93,22 +93,22 @@ data:
   isVerificationFile: false
   path: graph/graph-template.hpp
   requiredBy:
+  - graph/dijkstra.hpp
   - graph/euler-tour.hpp
   - graph/lca.hpp
+  - graph/topological-sort.hpp
   - graph/detect-cycle.hpp
   - graph/bellman-ford.hpp
-  - graph/topological-sort.hpp
   - graph/dijkstra-path.hpp
-  - graph/dijkstra.hpp
   timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/yosupo/vertex_add_subtree_sum.test.cpp
-  - tests/yosupo/lca_euler_tour.test.cpp
-  - tests/yosupo/vertex_add_path_sum.test.cpp
   - tests/aoj/GRL_5_C.test.cpp
-  - tests/aoj/GRL_5_D.test.cpp
   - tests/aoj/GRL_4_B.test.cpp
+  - tests/aoj/GRL_5_D.test.cpp
+  - tests/yosupo/vertex_add_path_sum.test.cpp
+  - tests/yosupo/lca_euler_tour.test.cpp
+  - tests/yosupo/vertex_add_subtree_sum.test.cpp
 documentation_of: graph/graph-template.hpp
 layout: document
 redirect_from:

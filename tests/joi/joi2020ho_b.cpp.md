@@ -13,28 +13,21 @@ data:
   - icon: ':warning:'
     path: template/macro.hpp
     title: template/macro.hpp
-  _extendedRequiredBy:
   - icon: ':warning:'
-    path: tests/joi/joi2009ho_c.cpp
-    title: joi2009ho_c
-  - icon: ':warning:'
-    path: tests/joi/joi2011ho4.cpp
-    title: joi2011ho4
-  - icon: ':warning:'
-    path: tests/joi/joi2015yo_e.cpp
-    title: joi2015yo_e
-  - icon: ':warning:'
-    path: tests/joi/joi2020ho_b.cpp
-    title: joi2020ho_b
+    path: template/template.hpp
+    title: template/template.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links: []
-  bundledCode: "#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false);\
-    \ _main(); return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
+    links:
+    - https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_b
+  bundledCode: "#line 1 \"tests/joi/joi2020ho_b.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_b\"\
+    \n#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main();\
+    \ return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
     \ e\n#define SELECT3(a,b,c,d,...) d\n#define REP1(a) for(ll i = 0; i < (ll)(a);\
     \ ++i)\n#define REP2(i, a) for(ll i = 0; i < (ll)(a); ++i)\n#define REP3(i, a,\
     \ b) for(ll i = (ll)(a); i < (ll)(b); ++i)\n#define REP4(i, a, b, c) for(ll i\
@@ -122,42 +115,40 @@ data:
     \        b>>=1;\n    }\n    return res;\n}\ninline ll mod_inv(ll a, const ll &mod){\n\
     \    ll b=mod,x=1,u=0,t;\n    while(b){\n        t=a/b;\n        std::swap(a-=t*b,b);\n\
     \        std::swap(x-=t*u,u);\n    }\n    if(x<0)x+=mod;\n    return x;\n}\n#line\
-    \ 9 \"template/template.hpp\"\n"
-  code: '#pragma once
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-    void _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main(); return
-    0;}
-
-    #include "./macro.hpp"
-
-    #include "./alias.hpp"
-
-    #include "./inout.hpp"
-
-    #include "./func.hpp"'
+    \ 3 \"tests/joi/joi2020ho_b.cpp\"\n\nvoid _main() {\n    INT(N,K);\n    STR(S);\n\
+    \    vi A,B,C;\n    rep(i,N){\n        if(S[i]=='J')A.pb(i);\n        else if(S[i]=='O')B.pb(i);\n\
+    \        else C.pb(i);\n    }\n    if(A.size()<K)fin(-1);\n    int ans=inf;\n\
+    \    rep(i,A.size()){\n        if(i+K-1<(int)A.size()){\n            int Ar=A[i+K-1];\n\
+    \            int idx=lower_bound(all(B),Ar)-B.begin();\n            if(idx+K-1<(int)B.size()){\n\
+    \                int Br=B[idx+K-1];\n                idx=lower_bound(all(C),Br)-C.begin();\n\
+    \                if(idx+K-1<(int)C.size()){\n                    chmin(ans,(C[idx+K-1]-A[i]+1)-K*3);\n\
+    \                }\n            }\n        }\n    }\n    if(ans==inf)ans=-1;\n\
+    \    print(ans);\n}\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_b\"\
+    \n#include \"template/template.hpp\"\n\nvoid _main() {\n    INT(N,K);\n    STR(S);\n\
+    \    vi A,B,C;\n    rep(i,N){\n        if(S[i]=='J')A.pb(i);\n        else if(S[i]=='O')B.pb(i);\n\
+    \        else C.pb(i);\n    }\n    if(A.size()<K)fin(-1);\n    int ans=inf;\n\
+    \    rep(i,A.size()){\n        if(i+K-1<(int)A.size()){\n            int Ar=A[i+K-1];\n\
+    \            int idx=lower_bound(all(B),Ar)-B.begin();\n            if(idx+K-1<(int)B.size()){\n\
+    \                int Br=B[idx+K-1];\n                idx=lower_bound(all(C),Br)-C.begin();\n\
+    \                if(idx+K-1<(int)C.size()){\n                    chmin(ans,(C[idx+K-1]-A[i]+1)-K*3);\n\
+    \                }\n            }\n        }\n    }\n    if(ans==inf)ans=-1;\n\
+    \    print(ans);\n}"
   dependsOn:
+  - template/template.hpp
   - template/macro.hpp
   - template/alias.hpp
   - template/inout.hpp
   - template/func.hpp
   isVerificationFile: false
-  path: template/template.hpp
-  requiredBy:
-  - tests/joi/joi2011ho4.cpp
-  - tests/joi/joi2020ho_b.cpp
-  - tests/joi/joi2009ho_c.cpp
-  - tests/joi/joi2015yo_e.cpp
-  timestamp: '2023-12-17 11:32:30+09:00'
+  path: tests/joi/joi2020ho_b.cpp
+  requiredBy: []
+  timestamp: '2024-02-01 22:05:01+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: template/template.hpp
+documentation_of: tests/joi/joi2020ho_b.cpp
 layout: document
-redirect_from:
-- /library/template/template.hpp
-- /library/template/template.hpp.html
-title: template/template.hpp
+title: joi2020ho_b
 ---
+## 考察
+最初dpを考えて解けなくて絶望していた。実際は単純な二分探索問題で、最初の'J'の位置を全探索すれば良い。

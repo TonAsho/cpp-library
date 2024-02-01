@@ -26,6 +26,9 @@ data:
   - icon: ':warning:'
     path: tests/joi/joi2015yo_e.cpp
     title: joi2015yo_e
+  - icon: ':warning:'
+    path: tests/joi/joi2020ho_b.cpp
+    title: joi2020ho_b
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_A.test.cpp
@@ -83,24 +86,25 @@ data:
   isVerificationFile: false
   path: template/alias.hpp
   requiredBy:
+  - others/monoid.hpp
   - data-structure/lazy-segment-tree.hpp
   - data-structure/segment-tree.hpp
-  - math/modint.hpp
   - template/template.hpp
-  - others/monoid.hpp
-  - tests/joi/joi2009ho_c.cpp
   - tests/joi/joi2011ho4.cpp
+  - tests/joi/joi2020ho_b.cpp
+  - tests/joi/joi2009ho_c.cpp
   - tests/joi/joi2015yo_e.cpp
+  - math/modint.hpp
   timestamp: '2023-12-17 11:32:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/yosupo/point_add_range_sum_2.test.cpp
-  - tests/aoj/DSL_2_H.test.cpp
+  - tests/aoj/DSL_2_B_2.test.cpp
   - tests/aoj/DSL_2_A.test.cpp
   - tests/aoj/DSL_2_F.test.cpp
   - tests/aoj/DSL_2_G.test.cpp
-  - tests/aoj/DSL_2_B_2.test.cpp
   - tests/aoj/DSL_2_I.test.cpp
+  - tests/aoj/DSL_2_H.test.cpp
+  - tests/yosupo/point_add_range_sum_2.test.cpp
 documentation_of: template/alias.hpp
 layout: document
 redirect_from:

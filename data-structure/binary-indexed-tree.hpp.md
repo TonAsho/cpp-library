@@ -60,12 +60,12 @@ data:
   timestamp: '2023-12-18 16:56:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/yosupo/vertex_add_subtree_sum.test.cpp
-  - tests/yosupo/vertex_add_path_sum.test.cpp
-  - tests/yosupo/point_add_range_sum.test.cpp
-  - tests/aoj/GRL_5_D.test.cpp
   - tests/aoj/ALDS1_5_D.test.cpp
   - tests/aoj/DSL_2_B.test.cpp
+  - tests/aoj/GRL_5_D.test.cpp
+  - tests/yosupo/vertex_add_path_sum.test.cpp
+  - tests/yosupo/vertex_add_subtree_sum.test.cpp
+  - tests/yosupo/point_add_range_sum.test.cpp
 documentation_of: data-structure/binary-indexed-tree.hpp
 layout: document
 redirect_from:

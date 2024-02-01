@@ -163,13 +163,13 @@ data:
   timestamp: '2024-01-19 15:38:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/yosupo/point_add_range_sum_2.test.cpp
-  - tests/aoj/DSL_2_H.test.cpp
+  - tests/aoj/DSL_2_B_2.test.cpp
   - tests/aoj/DSL_2_A.test.cpp
   - tests/aoj/DSL_2_F.test.cpp
   - tests/aoj/DSL_2_G.test.cpp
-  - tests/aoj/DSL_2_B_2.test.cpp
   - tests/aoj/DSL_2_I.test.cpp
+  - tests/aoj/DSL_2_H.test.cpp
+  - tests/yosupo/point_add_range_sum_2.test.cpp
 documentation_of: others/monoid.hpp
 layout: document
 redirect_from:

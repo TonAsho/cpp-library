@@ -105,6 +105,9 @@ data:
     - icon: ':warning:'
       path: tests/joi/joi2015yo_e.cpp
       title: joi2015yo_e
+    - icon: ':warning:'
+      path: tests/joi/joi2020ho_b.cpp
+      title: joi2020ho_b
   verificationCategories:
   - name: tests/aoj
     pages:
