@@ -23,8 +23,8 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links:
-    - https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_a
-  bundledCode: "#line 1 \"tests/joi/joi2020ho_a.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_a\"\
+    - https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_b
+  bundledCode: "#line 1 \"tests/joi/joi2019ho_b.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_b\"\
     \n#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main();\
     \ return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
@@ -115,23 +115,19 @@ data:
     \        b>>=1;\n    }\n    return res;\n}\ninline ll mod_inv(ll a, const ll &mod){\n\
     \    ll b=mod,x=1,u=0,t;\n    while(b){\n        t=a/b;\n        std::swap(a-=t*b,b);\n\
     \        std::swap(x-=t*u,u);\n    }\n    if(x<0)x+=mod;\n    return x;\n}\n#line\
-    \ 3 \"tests/joi/joi2020ho_a.cpp\"\n\nvoid _main() {\n    INT(N);\n    vi A(N+1),B(N);input(A,B);\n\
-    \    vi C=A;\n    sort(all(C));\n    sort(all(B));\n    vi LR(N),RL(N);\n    {//LR,RL\n\
-    \        rep(i,N){\n            LR[i]=max(0,C[i]-B[i]);\n            if(i-1>=0)chmax(LR[i],LR[i-1]);\n\
-    \        }\n        rrep(i,N){\n            RL[i]=max(0,C[i+1]-B[i]);\n      \
-    \      if(i+1<N)chmax(RL[i],RL[i+1]);\n        }\n    }\n    unordered_map<int,int>\
-    \ mp;\n    rep(i,N+1){\n        if(i==0)mp[C[i]]=RL[0];\n        else if(i==N)mp[C[i]]=LR[N-1];\n\
-    \        else mp[C[i]]=max(LR[i-1],RL[i]);\n    }\n    rep(i,N+1){\n        if(i!=0)cout<<\"\
-    \ \";\n        cout<<mp[A[i]];\n    }\n    cout<<endl;\n}\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_a\"\
-    \n#include \"template/template.hpp\"\n\nvoid _main() {\n    INT(N);\n    vi A(N+1),B(N);input(A,B);\n\
-    \    vi C=A;\n    sort(all(C));\n    sort(all(B));\n    vi LR(N),RL(N);\n    {//LR,RL\n\
-    \        rep(i,N){\n            LR[i]=max(0,C[i]-B[i]);\n            if(i-1>=0)chmax(LR[i],LR[i-1]);\n\
-    \        }\n        rrep(i,N){\n            RL[i]=max(0,C[i+1]-B[i]);\n      \
-    \      if(i+1<N)chmax(RL[i],RL[i+1]);\n        }\n    }\n    unordered_map<int,int>\
-    \ mp;\n    rep(i,N+1){\n        if(i==0)mp[C[i]]=RL[0];\n        else if(i==N)mp[C[i]]=LR[N-1];\n\
-    \        else mp[C[i]]=max(LR[i-1],RL[i]);\n    }\n    rep(i,N+1){\n        if(i!=0)cout<<\"\
-    \ \";\n        cout<<mp[A[i]];\n    }\n    cout<<endl;\n}"
+    \ 3 \"tests/joi/joi2019ho_b.cpp\"\n\nvoid _main() {\n    INT(N,M);\n    priority_queue<pii>\
+    \ Q;\n    rep(i,N){\n        INT(s,v);\n        Q.emplace(v,s);\n    }\n    vi\
+    \ C(M);input(C);\n    sort(all(C));\n    int ans=0;\n    while(!Q.empty()){\n\
+    \        auto [v,s]=Q.top();Q.pop();\n        if(C.empty())break;\n        if(C.back()>=s){\n\
+    \            C.pop_back();\n            ans++;\n        }\n    }\n    print(ans);\n\
+    }\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_b\"\
+    \n#include \"template/template.hpp\"\n\nvoid _main() {\n    INT(N,M);\n    priority_queue<pii>\
+    \ Q;\n    rep(i,N){\n        INT(s,v);\n        Q.emplace(v,s);\n    }\n    vi\
+    \ C(M);input(C);\n    sort(all(C));\n    int ans=0;\n    while(!Q.empty()){\n\
+    \        auto [v,s]=Q.top();Q.pop();\n        if(C.empty())break;\n        if(C.back()>=s){\n\
+    \            C.pop_back();\n            ans++;\n        }\n    }\n    print(ans);\n\
+    }"
   dependsOn:
   - template/template.hpp
   - template/macro.hpp
@@ -139,18 +135,14 @@ data:
   - template/inout.hpp
   - template/func.hpp
   isVerificationFile: false
-  path: tests/joi/joi2020ho_a.cpp
+  path: tests/joi/joi2019ho_b.cpp
   requiredBy: []
-  timestamp: '2024-02-01 22:32:27+09:00'
+  timestamp: '2024-02-02 17:16:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: tests/joi/joi2020ho_a.cpp
+documentation_of: tests/joi/joi2019ho_b.cpp
 layout: document
-title: joi2020ho_a
+title: joi2019ho_b
 ---
 ## 考察
-まじで分からんかった。頭が硬い。しかも３度の誤読をしていた。おい。
-
-しかもまたまたカス実装しました。C++の特性を活かしていて良いと思います。
-
-解法としては、 $A$ も $B$ も昇順にソートしておいて問題ないのです。そして、ソート順にネクタイを振り分ければ良いのです。
+数週間前全く分かんなかった問題。最初価値の合計の最大値かと誤読していたが、枚数の最大値と聞いてなぜかすぐに貪欲に走った。貪欲の証明は未だ嘗てやったことがないが、今回もやらない。というか分からない。

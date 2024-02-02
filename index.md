@@ -106,6 +106,9 @@ data:
       path: tests/joi/joi2015yo_e.cpp
       title: joi2015yo_e
     - icon: ':warning:'
+      path: tests/joi/joi2019ho_b.cpp
+      title: joi2019ho_b
+    - icon: ':warning:'
       path: tests/joi/joi2020ho_a.cpp
       title: joi2020ho_a
     - icon: ':warning:'
