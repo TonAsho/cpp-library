@@ -30,6 +30,9 @@ data:
     path: tests/joi/joi2019ho_b.cpp
     title: joi2019ho_b
   - icon: ':warning:'
+    path: tests/joi/joi2019ho_c.cpp
+    title: joi2019ho_c
+  - icon: ':warning:'
     path: tests/joi/joi2020ho_a.cpp
     title: joi2020ho_a
   - icon: ':warning:'
@@ -101,6 +104,7 @@ data:
   - template/template.hpp
   - tests/joi/joi2019ho_b.cpp
   - tests/joi/joi2020ho_c.cpp
+  - tests/joi/joi2019ho_c.cpp
   - tests/joi/joi2011ho4.cpp
   - tests/joi/joi2020ho_b.cpp
   - tests/joi/joi2009ho_c.cpp

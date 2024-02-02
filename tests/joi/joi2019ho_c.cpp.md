@@ -13,40 +13,21 @@ data:
   - icon: ':warning:'
     path: template/macro.hpp
     title: template/macro.hpp
-  _extendedRequiredBy:
   - icon: ':warning:'
-    path: tests/joi/joi2009ho_c.cpp
-    title: joi2009ho_c
-  - icon: ':warning:'
-    path: tests/joi/joi2011ho4.cpp
-    title: joi2011ho4
-  - icon: ':warning:'
-    path: tests/joi/joi2015yo_e.cpp
-    title: joi2015yo_e
-  - icon: ':warning:'
-    path: tests/joi/joi2019ho_b.cpp
-    title: joi2019ho_b
-  - icon: ':warning:'
-    path: tests/joi/joi2019ho_c.cpp
-    title: joi2019ho_c
-  - icon: ':warning:'
-    path: tests/joi/joi2020ho_a.cpp
-    title: joi2020ho_a
-  - icon: ':warning:'
-    path: tests/joi/joi2020ho_b.cpp
-    title: joi2020ho_b
-  - icon: ':warning:'
-    path: tests/joi/joi2020ho_c.cpp
-    title: joi2020ho_c
+    path: template/template.hpp
+    title: template/template.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links: []
-  bundledCode: "#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false);\
-    \ _main(); return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
+    links:
+    - https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_c
+  bundledCode: "#line 1 \"tests/joi/joi2019ho_c.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_c\"\
+    \n#line 2 \"template/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\nvoid _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main();\
+    \ return 0;}\n#line 3 \"template/macro.hpp\"\n\n#define SELECT4(a,b,c,d,e,...)\
     \ e\n#define SELECT3(a,b,c,d,...) d\n#define REP1(a) for(ll i = 0; i < (ll)(a);\
     \ ++i)\n#define REP2(i, a) for(ll i = 0; i < (ll)(a); ++i)\n#define REP3(i, a,\
     \ b) for(ll i = (ll)(a); i < (ll)(b); ++i)\n#define REP4(i, a, b, c) for(ll i\
@@ -134,46 +115,64 @@ data:
     \        b>>=1;\n    }\n    return res;\n}\ninline ll mod_inv(ll a, const ll &mod){\n\
     \    ll b=mod,x=1,u=0,t;\n    while(b){\n        t=a/b;\n        std::swap(a-=t*b,b);\n\
     \        std::swap(x-=t*u,u);\n    }\n    if(x<0)x+=mod;\n    return x;\n}\n#line\
-    \ 9 \"template/template.hpp\"\n"
-  code: '#pragma once
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-    void _main(); int main() { cin.tie(0); ios::sync_with_stdio(false); _main(); return
-    0;}
-
-    #include "./macro.hpp"
-
-    #include "./alias.hpp"
-
-    #include "./inout.hpp"
-
-    #include "./func.hpp"'
+    \ 3 \"tests/joi/joi2019ho_c.cpp\"\n\nvoid _main() {\n    INT(N);\n    STR(S);\n\
+    \    vi R,G,Y,rr(N),gg(N),yy(N);\n    rep(i,N){\n        if(i!=0)rr[i]=rr[i-1],gg[i]=gg[i-1],yy[i]=yy[i-1];\n\
+    \        if(S[i]=='R')R.pb(i),rr[i]++;\n        else if(S[i]=='G')G.pb(i),gg[i]++;\n\
+    \        else Y.pb(i),yy[i]++;\n    }\n    vector dp(R.size()+1,vector(G.size()+1,vector(Y.size()+1,vi(3,inf))));\n\
+    \    dp[0][0][0][0]=dp[0][0][0][1]=dp[0][0][0][2]=0;\n    rep(r,R.size()+1)rep(g,G.size()+1)rep(y,Y.size()+1)rep(c,3)if(dp[r][g][y][c]!=inf){\n\
+    \        if(c!=0&&(int)R.size()>r){//\u8D64\u3092\u8FFD\u52A0\u3059\u308B\n  \
+    \          int idx=R[r]+max(r-rr[R[r]],0)+max(g-gg[R[r]],0)+max(y-yy[R[r]],0);\n\
+    \            chmin(dp[r+1][g][y][0],idx-(r+g+y)+dp[r][g][y][c]);\n        }  \
+    \      \n        if(c!=1&&(int)G.size()>g){//\u7DD1\u3092\u8FFD\u52A0\u3059\u308B\
+    \n            int idx=G[g]+max(r-rr[G[g]],0)+max(g-gg[G[g]],0)+max(y-yy[G[g]],0);\n\
+    \            chmin(dp[r][g+1][y][1],idx-(r+g+y)+dp[r][g][y][c]);\n        }\n\
+    \        if(c!=2&&(int)Y.size()>y){//\u9EC4\u3092\u8FFD\u52A0\u3059\u308B\n  \
+    \          int idx=Y[y]+max(r-rr[Y[y]],0)+max(g-gg[Y[y]],0)+max(y-yy[Y[y]],0);\n\
+    \            chmin(dp[r][g][y+1][2],idx-(r+g+y)+dp[r][g][y][c]);\n        }\n\
+    \    }\n    int ans=inf;\n    rep(i,3)chmin(ans,dp[R.size()][G.size()][Y.size()][i]);\n\
+    \    if(ans==inf)ans=-1;\n    print(ans);\n}\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/joi2019ho/tasks/joi2019ho_c\"\
+    \n#include \"template/template.hpp\"\n\nvoid _main() {\n    INT(N);\n    STR(S);\n\
+    \    vi R,G,Y,rr(N),gg(N),yy(N);\n    rep(i,N){\n        if(i!=0)rr[i]=rr[i-1],gg[i]=gg[i-1],yy[i]=yy[i-1];\n\
+    \        if(S[i]=='R')R.pb(i),rr[i]++;\n        else if(S[i]=='G')G.pb(i),gg[i]++;\n\
+    \        else Y.pb(i),yy[i]++;\n    }\n    vector dp(R.size()+1,vector(G.size()+1,vector(Y.size()+1,vi(3,inf))));\n\
+    \    dp[0][0][0][0]=dp[0][0][0][1]=dp[0][0][0][2]=0;\n    rep(r,R.size()+1)rep(g,G.size()+1)rep(y,Y.size()+1)rep(c,3)if(dp[r][g][y][c]!=inf){\n\
+    \        if(c!=0&&(int)R.size()>r){//\u8D64\u3092\u8FFD\u52A0\u3059\u308B\n  \
+    \          int idx=R[r]+max(r-rr[R[r]],0)+max(g-gg[R[r]],0)+max(y-yy[R[r]],0);\n\
+    \            chmin(dp[r+1][g][y][0],idx-(r+g+y)+dp[r][g][y][c]);\n        }  \
+    \      \n        if(c!=1&&(int)G.size()>g){//\u7DD1\u3092\u8FFD\u52A0\u3059\u308B\
+    \n            int idx=G[g]+max(r-rr[G[g]],0)+max(g-gg[G[g]],0)+max(y-yy[G[g]],0);\n\
+    \            chmin(dp[r][g+1][y][1],idx-(r+g+y)+dp[r][g][y][c]);\n        }\n\
+    \        if(c!=2&&(int)Y.size()>y){//\u9EC4\u3092\u8FFD\u52A0\u3059\u308B\n  \
+    \          int idx=Y[y]+max(r-rr[Y[y]],0)+max(g-gg[Y[y]],0)+max(y-yy[Y[y]],0);\n\
+    \            chmin(dp[r][g][y+1][2],idx-(r+g+y)+dp[r][g][y][c]);\n        }\n\
+    \    }\n    int ans=inf;\n    rep(i,3)chmin(ans,dp[R.size()][G.size()][Y.size()][i]);\n\
+    \    if(ans==inf)ans=-1;\n    print(ans);\n}"
   dependsOn:
+  - template/template.hpp
   - template/macro.hpp
   - template/alias.hpp
   - template/inout.hpp
   - template/func.hpp
   isVerificationFile: false
-  path: template/template.hpp
-  requiredBy:
-  - tests/joi/joi2019ho_b.cpp
-  - tests/joi/joi2020ho_c.cpp
-  - tests/joi/joi2019ho_c.cpp
-  - tests/joi/joi2011ho4.cpp
-  - tests/joi/joi2020ho_b.cpp
-  - tests/joi/joi2009ho_c.cpp
-  - tests/joi/joi2015yo_e.cpp
-  - tests/joi/joi2020ho_a.cpp
-  timestamp: '2023-12-17 11:32:30+09:00'
+  path: tests/joi/joi2019ho_c.cpp
+  requiredBy: []
+  timestamp: '2024-02-02 23:55:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: template/template.hpp
+documentation_of: tests/joi/joi2019ho_c.cpp
 layout: document
-redirect_from:
-- /library/template/template.hpp
-- /library/template/template.hpp.html
-title: template/template.hpp
+title: joi2019ho_c
 ---
+## 考察
+操作後の文字列を `T` とする。
+
+$dp_{r,g,y,c}$ を、`T` の先頭から $r+g+y$  番目までに、赤を $r$ 個、緑を $g$ 個、黄を $y$ 個使って、最後の色が $c$ の時の、操作回数の最小値とする。
+
+遷移を考える。
+
+赤玉を追加するとき、それとペアとなるのは `S` の $R_r$ 番目の文字である。しかし、赤を $r$ 個、緑を $g$ 個、黄を $y$ 個、既に前に移動させているので、`S` の $R_r$ 番目の文字は後方に移動してしまう(または動かない)。
+
+これより、 `S` の $i$ 番目の文字の前にある各色の個数、$r_i$ , $g_i$ , $y_i$ ,を計算しておくと、`S` の $R_r$ 番目の文字は移動後  $R_r+max(r-r_{R_i},0)+max(g-g_{R_i},0)+max(y-y_{R_i},0)$ 番目に移動すると分かった。
+
+あとは実装！
