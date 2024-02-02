@@ -32,6 +32,9 @@ data:
   - icon: ':warning:'
     path: tests/joi/joi2020ho_b.cpp
     title: joi2020ho_b
+  - icon: ':warning:'
+    path: tests/joi/joi2020ho_c.cpp
+    title: joi2020ho_c
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/aoj/DSL_2_A.test.cpp
@@ -93,6 +96,7 @@ data:
   - data-structure/lazy-segment-tree.hpp
   - data-structure/segment-tree.hpp
   - template/template.hpp
+  - tests/joi/joi2020ho_c.cpp
   - tests/joi/joi2011ho4.cpp
   - tests/joi/joi2020ho_b.cpp
   - tests/joi/joi2009ho_c.cpp

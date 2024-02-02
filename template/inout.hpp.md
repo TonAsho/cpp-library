@@ -20,6 +20,9 @@ data:
   - icon: ':warning:'
     path: tests/joi/joi2020ho_b.cpp
     title: joi2020ho_b
+  - icon: ':warning:'
+    path: tests/joi/joi2020ho_c.cpp
+    title: joi2020ho_c
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -253,6 +256,7 @@ data:
   path: template/inout.hpp
   requiredBy:
   - template/template.hpp
+  - tests/joi/joi2020ho_c.cpp
   - tests/joi/joi2011ho4.cpp
   - tests/joi/joi2020ho_b.cpp
   - tests/joi/joi2009ho_c.cpp
